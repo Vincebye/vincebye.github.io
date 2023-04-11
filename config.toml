@@ -11,12 +11,14 @@ defaultContentLanguage = "en-gb"
 
 # To enable Google Analytics 4 (gtag.js) provide G-MEASUREMENT_ID below.
 # To disable  Google Analytics, simply leave the field empty or remove the next line
-googleAnalytics = '' # G-MEASUREMENT_ID
+googleAnalytics = 'G-GKH5P9VW55' # G-MEASUREMENT_ID
 
 
 # Enable emojis globally
 enableEmoji = true
 buildFuture = true
+
+
 
 # set markup.highlight.noClasses=false to enable code highlight
 [markup]

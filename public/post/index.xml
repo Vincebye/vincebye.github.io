@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Awesome Hugo blog</title>
-    <link>https://vincebye.github.io/</link>
-    <description>Recent content on Awesome Hugo blog</description>
+    <title>Posts on Awesome Hugo blog</title>
+    <link>https://vincebye.github.io/post/</link>
+    <description>Recent content in Posts on Awesome Hugo blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 Apr 2023 17:18:23 +0800</lastBuildDate><atom:link href="https://vincebye.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Apr 2023 17:18:23 +0800</lastBuildDate><atom:link href="https://vincebye.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello</title>
       <link>https://vincebye.github.io/post/hello/</link>
@@ -22,15 +22,6 @@
       <pubDate>Tue, 11 Apr 2023 12:40:47 +0800</pubDate>
       
       <guid>https://vincebye.github.io/post/test/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Test</title>
-      <link>https://vincebye.github.io/test/</link>
-      <pubDate>Tue, 11 Apr 2023 12:40:24 +0800</pubDate>
-      
-      <guid>https://vincebye.github.io/test/</guid>
       <description></description>
     </item>
     
