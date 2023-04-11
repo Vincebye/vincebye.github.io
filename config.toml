@@ -13,6 +13,7 @@ defaultContentLanguage = "en-gb"
 # To disable  Google Analytics, simply leave the field empty or remove the next line
 googleAnalytics = 'G-GKH5P9VW55' # G-MEASUREMENT_ID
 
+disqusShortname = 'vincebye'
 
 # Enable emojis globally
 enableEmoji = true
