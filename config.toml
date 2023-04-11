@@ -44,24 +44,24 @@ enableEmoji = true
     weight = 30
 
 [params]
-  sitename = "Awesome hugo blog"
+  sitename = "Vincebye's Blog"
   defaultColor = "dark" # set default color mode: dark or light
   description = "Minimal Hugo blog theme with light and dark mode support"
 
 [params.author]
   avatar = "avatar.jpg" # put the file in assets folder; also ensure that image has same height and width
   # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
-  intro = "Awesome hugo blog"
-  name = "Sidharth R"
-  description = "A fast, minimalistic Hugo theme with light and dark mode support, for running a personal site or blog"
+  intro = "Vincebye's blog"
+  name = "Z"
+  description = "None"
 
 [[params.socialIcons]]
 name = "github"
-url = "https://github.com/hugo-sid"
+url = "https://github.com/Vincebye/"
 
 [[params.socialIcons]]
 name = "twitter"
-url = "https://twitter.com"
+url = "https://twitter.com/vincebye"
 
 [[params.socialIcons]]
 name = "Rss"
