@@ -3,7 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://vincebye.github.io/</loc>
-    <lastmod>2023-04-11T17:18:23+08:00</lastmod>
+    <lastmod>2023-04-12T00:38:17+08:00</lastmod>
+  </url><url>
+    <loc>https://vincebye.github.io/fuzzer/</loc>
+    <lastmod>2023-04-12T00:38:17+08:00</lastmod>
+  </url><url>
+    <loc>https://vincebye.github.io/fuzzer/libafl-introduce/</loc>
+    <lastmod>2023-04-12T00:38:17+08:00</lastmod>
   </url><url>
     <loc>https://vincebye.github.io/post/hello/</loc>
     <lastmod>2023-04-11T17:18:23+08:00</lastmod>
