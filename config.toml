@@ -16,6 +16,7 @@ googleAnalytics = '' # G-MEASUREMENT_ID
 
 # Enable emojis globally
 enableEmoji = true
+buildFuture = true
 
 # set markup.highlight.noClasses=false to enable code highlight
 [markup]
