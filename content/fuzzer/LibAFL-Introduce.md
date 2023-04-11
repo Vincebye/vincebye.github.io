@@ -112,5 +112,5 @@ LibAFL Book：https://aflplus.plus/libafl-book/libafl.html
 
 
 以baby_fuzzer为例看看如何装配组件的
-![picture](../../static/Pasted%20image%2020230408200259.png)
+![picture](../../images/Pasted%20image%2020230408200259.png)
 通过对着色部分的组装完成一个简单的fuzzer,乍看是有些繁杂，但是了解了每个部分功能以后，直接在原有代码进行更改就会比较简便。
