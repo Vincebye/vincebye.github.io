@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">Pin学习记录 | Awesome Hugo blog</title>
+<meta property="og:title" content="Pin学习记录 | Awesome Hugo blog" />
+<meta name="twitter:title" content="Pin学习记录 | Awesome Hugo blog" />
+<meta itemprop="name" content="Pin学习记录 | Awesome Hugo blog" />
+<meta name="application-name" content="Pin学习记录 | Awesome Hugo blog" />
+<meta property="og:site_name" content="Vincebye&#39;s Blog" />
+
+<meta name="description" content="Minimal Hugo blog theme with light and dark mode support">
+<meta itemprop="description" content="Minimal Hugo blog theme with light and dark mode support" />
+<meta property="og:description" content="Minimal Hugo blog theme with light and dark mode support" />
+<meta name="twitter:description" content="Minimal Hugo blog theme with light and dark mode support" />
+
+<meta property="og:locale" content="en-us" />
+<meta name="language" content="en-us" />
+
+
+
+  <meta itemprop="image" content="https://vincebye.github.io/" />
+  <meta property="og:image" content="https://vincebye.github.io/" />
+  <meta name="twitter:image" content="https://vincebye.github.io/" />
+  <meta name="twitter:image:src" content="https://vincebye.github.io/" />
+
+
+
+
+  <meta name="generator" content="Hugo 0.111.3">
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GKH5P9VW55"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GKH5P9VW55');
+</script>
+  
+  
+
+  <link rel="canonical" href="https://vincebye.github.io/dbi/pin%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"><link href="/sass/main.min.0eebb6db90b4ec9f4444ef402f08421ee056025ba860df3d749a9f299d472008.css" rel="stylesheet"><link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+  
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/images/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg">
+
+  
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GKH5P9VW55"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-GKH5P9VW55', { 'anonymize_ip': false });
+}
+</script>
+</head><body data-theme = "dark" class="notransition">
+<script src="https://vincebye.github.io/js/themeLoader.min.4e9e1a253d543bbfec02e7f2460d9621e719fd739dc8a5256faa91cda6e12e03.js"></script><div class="navbar" role="navigation">
+  <nav class="menu" aria-label="Main Navigation">
+    <a href="/" class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+    </a>
+    <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+    <label for="menu-trigger">
+      <span class="menu-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+      </span>
+    </label>
+
+    <div class="trigger">
+      <ul class="trigger-container">
+        
+        
+          <li>
+            <a 
+            class="menu-link "
+            href="/">
+            Home
+            </a>
+            
+          </li>
+        
+          <li>
+            <a 
+            class="menu-link "
+            href="/posts/">
+            Posts
+            </a>
+            
+          </li>
+        
+          <li>
+            <a 
+            class="menu-link "
+            href="/about/">
+            About
+            </a>
+            
+          </li>
+        
+        <li class="menu-separator">
+          <span>|</span>
+        </li>
+      </ul>
+      <a id="mode" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+      </a>
+    </div>
+  </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">Pin学习记录</h1>
+                
+                <div class="post-meta">
+                    <time datetime="2023-04-13T16:34:00&#43;08:00" itemprop="datePublished"> 13 Apr 2023 </time>
+                </div>
+            </header>
+            <div class="page-content">
+                <p>#插桩</p>
+<h1 id="环境">环境</h1>
+<h2 id="windows">windows</h2>
+<p><strong>Make&amp;GCC&amp;G++</strong></p>
+<p>安装cygwin</p>
+<p>安装勾选gcc-core g++ make 在devel类别里</p>
+<p>然后将bin目录加入path</p>
+<p><strong>编译测试项目</strong></p>
+<p>64位</p>
+<p>使用x64 Native Tools Command Prompt for VS 2019</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">cd</span> <span class="nl">C</span><span class="p">:</span><span class="err">\\</span><span class="n">pin</span><span class="err">\\</span><span class="n">source</span><span class="err">\\</span><span class="n">tools</span><span class="err">\\</span><span class="n">ManualExamples</span>
+</span></span><span class="line"><span class="cl"><span class="n">make</span> <span class="n">all</span> <span class="n">TARGET</span><span class="o">=</span><span class="n">intel64</span>
+</span></span></code></pre></div><p>32位</p>
+<p>使用x86 Native Tools Command Prompt for VS 2019，修改C:\pin\source\tools\Config\win.vars中添加一行
+<img src="../../images/pin0.png" alt="picture0"></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">cd</span> <span class="nl">C</span><span class="p">:</span><span class="err">\\</span><span class="n">pin</span><span class="err">\\</span><span class="n">source</span><span class="err">\\</span><span class="n">tools</span><span class="err">\\</span><span class="n">ManualExamples</span>
+</span></span><span class="line"><span class="cl"><span class="n">make</span> <span class="n">all</span> 
+</span></span></code></pre></div><h2 id="vs集成pin">VS集成Pin</h2>
+<p>在VS中选择工具→外部工具→Add</p>
+<p><img src="../../images/pin1.png" alt="picture1"></p>
+<h1 id="运行">运行</h1>
+<h2 id="examples">Examples</h2>
+<h3 id="simple-instruction-count-指令插桩"><strong><strong>Simple Instruction Count （指令插桩）</strong></strong></h3>
+<p>统计执行过的指令的总数</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Copyright (C) 2004-2021 Intel Corporation.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * SPDX-License-Identifier: MIT
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;pin.H&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="n">using</span> <span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">using</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">using</span> <span class="n">std</span><span class="o">::</span><span class="n">ios</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">using</span> <span class="n">std</span><span class="o">::</span><span class="n">ofstream</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">using</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ofstream</span> <span class="n">OutFile</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// The running count of instructions is kept here
+</span></span></span><span class="line"><span class="cl"><span class="c1">// make it static to help the compiler optimize docount
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">static</span> <span class="n">UINT64</span> <span class="n">icount</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// This function is called before every instruction is executed
+</span></span></span><span class="line"><span class="cl"><span class="c1">//每个指令执行之前运行这个函数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">VOID</span> <span class="nf">docount</span><span class="p">()</span> <span class="p">{</span> <span class="n">icount</span><span class="o">++</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Pin calls this function every time a new instruction is encountered
+</span></span></span><span class="line"><span class="cl"><span class="c1">//每遇到一条指令，运行一次这个函数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">VOID</span> <span class="nf">Instruction</span><span class="p">(</span><span class="n">INS</span> <span class="n">ins</span><span class="p">,</span> <span class="n">VOID</span><span class="o">*</span> <span class="n">v</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Insert a call to docount before every instruction, no arguments are passed
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//在每条指令运行之前插入一个函数来计数，没有参数传递
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">INS_InsertCall</span><span class="p">(</span><span class="n">ins</span><span class="p">,</span> <span class="n">IPOINT_BEFORE</span><span class="p">,</span> <span class="p">(</span><span class="n">AFUNPTR</span><span class="p">)</span><span class="n">docount</span><span class="p">,</span> <span class="n">IARG_END</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">KNOB</span><span class="o">&lt;</span> <span class="n">string</span> <span class="o">&gt;</span> <span class="nf">KnobOutputFile</span><span class="p">(</span><span class="n">KNOB_MODE_WRITEONCE</span><span class="p">,</span> <span class="s">&#34;pintool&#34;</span><span class="p">,</span> <span class="s">&#34;o&#34;</span><span class="p">,</span> <span class="s">&#34;inscount.out&#34;</span><span class="p">,</span> <span class="s">&#34;specify output file name&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// This function is called when the application exits
+</span></span></span><span class="line"><span class="cl"><span class="c1">//程序退出时运行
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">VOID</span> <span class="nf">Fini</span><span class="p">(</span><span class="n">INT32</span> <span class="n">code</span><span class="p">,</span> <span class="n">VOID</span><span class="o">*</span> <span class="n">v</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Write to a file since cout and cerr maybe closed by the application
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">OutFile</span><span class="p">.</span><span class="nf">setf</span><span class="p">(</span><span class="n">ios</span><span class="o">::</span><span class="n">showbase</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">OutFile</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;Count &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">icount</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">OutFile</span><span class="p">.</span><span class="nf">close</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/* ===================================================================== */</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/* Print Help Message                                                    */</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/* ===================================================================== */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">INT32</span> <span class="nf">Usage</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;This tool counts the number of dynamic instructions executed&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span> <span class="o">&lt;&lt;</span> <span class="n">KNOB_BASE</span><span class="o">::</span><span class="nf">StringKnobSummary</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/* ===================================================================== */</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/* Main                                                                  */</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/* ===================================================================== */</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/*   argc, argv are the entire command line: pin -t &lt;toolname&gt; -- ...    */</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/* ===================================================================== */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Initialize pin
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nf">PIN_Init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">))</span> <span class="k">return</span> <span class="nf">Usage</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">OutFile</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="n">KnobOutputFile</span><span class="p">.</span><span class="nf">Value</span><span class="p">().</span><span class="nf">c_str</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Register Instruction to be called to instrument instructions
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">INS_AddInstrumentFunction</span><span class="p">(</span><span class="n">Instruction</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Register Fini to be called when the application exits
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">PIN_AddFiniFunction</span><span class="p">(</span><span class="n">Fini</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Start the program, never returns
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">PIN_StartProgram</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><ul>
+<li>
+<p>插曲第一个代码就出现问题</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nl">C</span><span class="p">:</span><span class="err">\\</span><span class="n">pin</span><span class="err">\\</span><span class="n">source</span><span class="err">\\</span><span class="n">tools</span><span class="err">\\</span><span class="n">ManualExamples</span><span class="err">\\</span><span class="n">obj</span><span class="o">-</span><span class="n">intel64</span><span class="o">&gt;</span><span class="n">pin</span> <span class="o">-</span><span class="n">t</span> <span class="n">inscount0</span><span class="p">.</span><span class="n">dll</span> <span class="o">--</span> <span class="n">whoami</span>
+</span></span><span class="line"><span class="cl"><span class="nl">E</span><span class="p">:</span> <span class="p">[</span><span class="nl">tid</span><span class="p">:</span><span class="mi">23268</span><span class="p">]</span> <span class="n">Failure</span> <span class="n">to</span> <span class="n">map</span> <span class="n">DLL</span> <span class="nl">C</span><span class="p">:</span><span class="err">\\</span><span class="n">pin</span><span class="err">\\</span><span class="n">source</span><span class="err">\\</span><span class="n">tools</span><span class="err">\\</span><span class="n">ManualExamples</span><span class="err">\\</span><span class="n">obj</span><span class="o">-</span><span class="n">intel64</span><span class="err">\\</span><span class="n">inscount0</span><span class="p">.</span><span class="n">dll</span>
+</span></span><span class="line"><span class="cl"><span class="nl">E</span><span class="p">:</span>       <span class="n">System</span> <span class="n">error</span> <span class="mi">216</span> <span class="o">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//216是版本不对，我们选择32位dll
+</span></span></span><span class="line"><span class="cl"><span class="c1">//解决了部分问题，ls还是没有结果是空的
+</span></span></span></code></pre></div></li>
+</ul>
+<h3 id="instruction-address-trace指令插桩"><strong><strong>Instruction Address Trace（指令插桩）</strong></strong></h3>
+<p>打印执行的指令的地址</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Copyright (C) 2004-2021 Intel Corporation.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * SPDX-License-Identifier: MIT
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;pin.H&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="n">FILE</span><span class="o">*</span> <span class="n">trace</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// This function is called before every instruction is executed
+</span></span></span><span class="line"><span class="cl"><span class="c1">// and prints the IP
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">VOID</span> <span class="nf">printip</span><span class="p">(</span><span class="n">VOID</span><span class="o">*</span> <span class="n">ip</span><span class="p">)</span> <span class="p">{</span> <span class="nf">fprintf</span><span class="p">(</span><span class="n">trace</span><span class="p">,</span> <span class="s">&#34;%p</span><span class="se">\\</span><span class="s">n&#34;</span><span class="p">,</span> <span class="n">ip</span><span class="p">);</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Pin calls this function every time a new instruction is encountered
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">VOID</span> <span class="nf">Instruction</span><span class="p">(</span><span class="n">INS</span> <span class="n">ins</span><span class="p">,</span> <span class="n">VOID</span><span class="o">*</span> <span class="n">v</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Insert a call to printip before every instruction, and pass it the IP
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">INS_InsertCall</span><span class="p">(</span><span class="n">ins</span><span class="p">,</span> <span class="n">IPOINT_BEFORE</span><span class="p">,</span> <span class="p">(</span><span class="n">AFUNPTR</span><span class="p">)</span><span class="n">printip</span><span class="p">,</span> <span class="n">IARG_INST_PTR</span><span class="p">,</span> <span class="n">IARG_END</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// This function is called when the application exits
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">VOID</span> <span class="nf">Fini</span><span class="p">(</span><span class="n">INT32</span> <span class="n">code</span><span class="p">,</span> <span class="n">VOID</span><span class="o">*</span> <span class="n">v</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">fprintf</span><span class="p">(</span><span class="n">trace</span><span class="p">,</span> <span class="s">&#34;#eof</span><span class="se">\\</span><span class="s">n&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">fclose</span><span class="p">(</span><span class="n">trace</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/* ===================================================================== */</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/* Print Help Message                                                    */</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/* ===================================================================== */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">INT32</span> <span class="nf">Usage</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">PIN_ERROR</span><span class="p">(</span><span class="s">&#34;This Pintool prints the IPs of every instruction executed</span><span class="se">\\</span><span class="s">n&#34;</span> <span class="o">+</span> <span class="n">KNOB_BASE</span><span class="o">::</span><span class="nf">StringKnobSummary</span><span class="p">()</span> <span class="o">+</span> <span class="s">&#34;</span><span class="se">\\</span><span class="s">n&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/* ===================================================================== */</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/* Main                                                                  */</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/* ===================================================================== */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">trace</span> <span class="o">=</span> <span class="nf">fopen</span><span class="p">(</span><span class="s">&#34;itrace.out&#34;</span><span class="p">,</span> <span class="s">&#34;w&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Initialize pin
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nf">PIN_Init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">))</span> <span class="k">return</span> <span class="nf">Usage</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Register Instruction to be called to instrument instructions
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">INS_AddInstrumentFunction</span><span class="p">(</span><span class="n">Instruction</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Register Fini to be called when the application exits
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">PIN_AddFiniFunction</span><span class="p">(</span><span class="n">Fini</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Start the program, never returns
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">PIN_StartProgram</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>与第一个代码基本相同，区别在于</p>
+<ul>
+<li>直接定义文件trace = fopen(&ldquo;itrace.out&rdquo;, &ldquo;w&rdquo;);，避免KNOB&lt; string &gt; KnobOutputFile(KNOB_MODE_WRITEONCE, &ldquo;pintool&rdquo;, &ldquo;o&rdquo;, &ldquo;inscount.out&rdquo;, &ldquo;specify output file name&rdquo;);</li>
+<li>插桩的函数要传参加了一个IARG_INST_PTR，所以IARG_INST_PTR=地址</li>
+</ul>
+<h3 id="memory-reference-trace-指令插桩"><strong><strong>Memory Reference Trace （指令插桩）</strong></strong></h3>
+<p>内存引用追踪（只对读写内存的指令插桩）</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Copyright (C) 2004-2021 Intel Corporation.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * SPDX-License-Identifier: MIT
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *  This file contains an ISA-portable PIN tool for tracing memory accesses.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;pin.H&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="n">FILE</span><span class="o">*</span> <span class="n">trace</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Print a memory read record
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">VOID</span> <span class="nf">RecordMemRead</span><span class="p">(</span><span class="n">VOID</span><span class="o">*</span> <span class="n">ip</span><span class="p">,</span> <span class="n">VOID</span><span class="o">*</span> <span class="n">addr</span><span class="p">)</span> <span class="p">{</span> <span class="nf">fprintf</span><span class="p">(</span><span class="n">trace</span><span class="p">,</span> <span class="s">&#34;%p: R %p</span><span class="se">\\</span><span class="s">n&#34;</span><span class="p">,</span> <span class="n">ip</span><span class="p">,</span> <span class="n">addr</span><span class="p">);</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Print a memory write record
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">VOID</span> <span class="nf">RecordMemWrite</span><span class="p">(</span><span class="n">VOID</span><span class="o">*</span> <span class="n">ip</span><span class="p">,</span> <span class="n">VOID</span><span class="o">*</span> <span class="n">addr</span><span class="p">)</span> <span class="p">{</span> <span class="nf">fprintf</span><span class="p">(</span><span class="n">trace</span><span class="p">,</span> <span class="s">&#34;%p: W %p</span><span class="se">\\</span><span class="s">n&#34;</span><span class="p">,</span> <span class="n">ip</span><span class="p">,</span> <span class="n">addr</span><span class="p">);</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Is called for every instruction and instruments reads and writes
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">VOID</span> <span class="nf">Instruction</span><span class="p">(</span><span class="n">INS</span> <span class="n">ins</span><span class="p">,</span> <span class="n">VOID</span><span class="o">*</span> <span class="n">v</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Instruments memory accesses using a predicated call, i.e.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// the instrumentation is called iff the instruction will actually be executed.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// On the IA-32 and Intel(R) 64 architectures conditional moves and REP
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// prefixed instructions appear as predicated instructions in Pin.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">UINT32</span> <span class="n">memOperands</span> <span class="o">=</span> <span class="nf">INS_MemoryOperandCount</span><span class="p">(</span><span class="n">ins</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Iterate over each memory operand of the instruction.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">for</span> <span class="p">(</span><span class="n">UINT32</span> <span class="n">memOp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">memOp</span> <span class="o">&lt;</span> <span class="n">memOperands</span><span class="p">;</span> <span class="n">memOp</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nf">INS_MemoryOperandIsRead</span><span class="p">(</span><span class="n">ins</span><span class="p">,</span> <span class="n">memOp</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">INS_InsertPredicatedCall</span><span class="p">(</span><span class="n">ins</span><span class="p">,</span> <span class="n">IPOINT_BEFORE</span><span class="p">,</span> <span class="p">(</span><span class="n">AFUNPTR</span><span class="p">)</span><span class="n">RecordMemRead</span><span class="p">,</span> <span class="n">IARG_INST_PTR</span><span class="p">,</span> <span class="n">IARG_MEMORYOP_EA</span><span class="p">,</span> <span class="n">memOp</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                     <span class="n">IARG_END</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Note that in some architectures a single memory operand can be
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// both read and written (for instance incl (%eax) on IA-32)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// In that case we instrument it once for read and once for write.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="nf">INS_MemoryOperandIsWritten</span><span class="p">(</span><span class="n">ins</span><span class="p">,</span> <span class="n">memOp</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">INS_InsertPredicatedCall</span><span class="p">(</span><span class="n">ins</span><span class="p">,</span> <span class="n">IPOINT_BEFORE</span><span class="p">,</span> <span class="p">(</span><span class="n">AFUNPTR</span><span class="p">)</span><span class="n">RecordMemWrite</span><span class="p">,</span> <span class="n">IARG_INST_PTR</span><span class="p">,</span> <span class="n">IARG_MEMORYOP_EA</span><span class="p">,</span> <span class="n">memOp</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                     <span class="n">IARG_END</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">VOID</span> <span class="nf">Fini</span><span class="p">(</span><span class="n">INT32</span> <span class="n">code</span><span class="p">,</span> <span class="n">VOID</span><span class="o">*</span> <span class="n">v</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">fprintf</span><span class="p">(</span><span class="n">trace</span><span class="p">,</span> <span class="s">&#34;#eof</span><span class="se">\\</span><span class="s">n&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">fclose</span><span class="p">(</span><span class="n">trace</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/* ===================================================================== */</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/* Print Help Message                                                    */</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/* ===================================================================== */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">INT32</span> <span class="nf">Usage</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">PIN_ERROR</span><span class="p">(</span><span class="s">&#34;This Pintool prints a trace of memory addresses</span><span class="se">\\</span><span class="s">n&#34;</span> <span class="o">+</span> <span class="n">KNOB_BASE</span><span class="o">::</span><span class="nf">StringKnobSummary</span><span class="p">()</span> <span class="o">+</span> <span class="s">&#34;</span><span class="se">\\</span><span class="s">n&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/* ===================================================================== */</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/* Main                                                                  */</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/* ===================================================================== */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nf">PIN_Init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">))</span> <span class="k">return</span> <span class="nf">Usage</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">trace</span> <span class="o">=</span> <span class="nf">fopen</span><span class="p">(</span><span class="s">&#34;pinatrace.out&#34;</span><span class="p">,</span> <span class="s">&#34;w&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">INS_AddInstrumentFunction</span><span class="p">(</span><span class="n">Instruction</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">PIN_AddFiniFunction</span><span class="p">(</span><span class="n">Fini</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Never returns
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">PIN_StartProgram</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><ul>
+<li>INS_InsertPredicatedCall</li>
+<li>IARG_MEMORYOP_EA影响的内存地址</li>
+</ul>
+<h3 id="detecting-the-loading-and-unloading-of-imagesimage插桩"><strong><strong>Detecting the loading and Unloading of Images（image插桩）</strong></strong></h3>
+<p>检测载入的DLL和卸载的DLL</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;fstream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span><span class="cpf">&#34;pin.H&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="n">using</span> <span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">using</span> <span class="n">std</span><span class="o">::</span><span class="n">ofstream</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">using</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">using</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//定义输出文件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">KNOB</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="nf">KnobOutputFile</span><span class="p">(</span><span class="n">KNOB_MODE_WRITEONCE</span><span class="p">,</span> <span class="s">&#34;pintool&#34;</span><span class="p">,</span> <span class="s">&#34;o&#34;</span><span class="p">,</span> <span class="s">&#34;vuleyes.out&#34;</span><span class="p">,</span> <span class="s">&#34;specify filename~&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">ofstream</span> <span class="n">TraceFile</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//帮助信息
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">INT32</span> <span class="nf">Usage</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">PIN_ERROR</span><span class="p">(</span><span class="s">&#34;Something Wrong!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">VOID</span> <span class="nf">ImageLoad</span><span class="p">(</span><span class="n">IMG</span> <span class="n">img</span><span class="p">,</span> <span class="n">VOID</span><span class="o">*</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">	<span class="n">cerr</span><span class="o">&lt;&lt;</span> <span class="s">&#34;Loading&#34;</span> <span class="o">&lt;&lt;</span> <span class="nf">IMG_Name</span><span class="p">(</span><span class="n">img</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;,Image id=&#34;</span> <span class="o">&lt;&lt;</span> <span class="nf">IMG_Id</span><span class="p">(</span><span class="n">img</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">TraceFile</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;Loading&#34;</span> <span class="o">&lt;&lt;</span> <span class="nf">IMG_Name</span><span class="p">(</span><span class="n">img</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;,Image id=&#34;</span> <span class="o">&lt;&lt;</span> <span class="nf">IMG_Id</span><span class="p">(</span><span class="n">img</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">VOID</span> <span class="nf">ImageUnload</span><span class="p">(</span><span class="n">IMG</span> <span class="n">img</span><span class="p">,</span> <span class="n">VOID</span><span class="o">*</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">	<span class="n">TraceFile</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;Unloading&#34;</span> <span class="o">&lt;&lt;</span> <span class="nf">IMG_Name</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>  <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;Unloading&#34;</span> <span class="o">&lt;&lt;</span> <span class="nf">IMG_Name</span><span class="p">(</span><span class="n">img</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">VOID</span> <span class="nf">Fini</span><span class="p">(</span><span class="n">INT32</span> <span class="n">code</span><span class="p">,</span> <span class="n">VOID</span><span class="o">*</span> <span class="n">V</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">TraceFile</span><span class="p">.</span><span class="nf">is_open</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">TraceFile</span><span class="p">.</span><span class="nf">close</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//要使用名称得先初始化符合
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nf">PIN_InitSymbols</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="nf">PIN_Init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">))</span> <span class="k">return</span> <span class="nf">Usage</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//c_str()返回当前字符串的首字符地址
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">TraceFile</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="n">KnobOutputFile</span><span class="p">.</span><span class="nf">Value</span><span class="p">().</span><span class="nf">c_str</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">IMG_AddInstrumentFunction</span><span class="p">(</span><span class="n">ImageLoad</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">IMG_AddUnloadFunction</span><span class="p">(</span><span class="n">ImageUnload</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nf">PIN_AddFiniFunction</span><span class="p">(</span><span class="n">Fini</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nf">PIN_StartProgram</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nl">C</span><span class="p">:</span><span class="err">\\</span><span class="n">pin</span><span class="err">\\</span><span class="n">source</span><span class="err">\\</span><span class="n">tools</span><span class="err">\\</span><span class="n">MyPinTool</span><span class="err">\\</span><span class="n">Release</span><span class="o">&gt;</span><span class="n">pin</span> <span class="o">-</span><span class="n">t</span> <span class="n">MyPinTool</span><span class="p">.</span><span class="n">dll</span> <span class="o">--</span> <span class="n">ExercisePin</span><span class="p">.</span><span class="n">exe</span>
+</span></span><span class="line"><span class="cl"><span class="nl">LoadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">pin</span><span class="err">\\</span><span class="n">source</span><span class="err">\\</span><span class="n">tools</span><span class="err">\\</span><span class="n">MyPinTool</span><span class="err">\\</span><span class="n">Release</span><span class="err">\\</span><span class="n">ExercisePin</span><span class="p">.</span><span class="n">exe</span><span class="p">,</span><span class="n">Image</span> <span class="n">id</span><span class="o">=</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="nl">LoadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">kernel32</span><span class="p">.</span><span class="n">dll</span><span class="p">,</span><span class="n">Image</span> <span class="n">id</span><span class="o">=</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="nl">LoadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">KernelBase</span><span class="p">.</span><span class="n">dll</span><span class="p">,</span><span class="n">Image</span> <span class="n">id</span><span class="o">=</span><span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="nl">LoadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">ntdll</span><span class="p">.</span><span class="n">dll</span><span class="p">,</span><span class="n">Image</span> <span class="n">id</span><span class="o">=</span><span class="mi">4</span>
+</span></span><span class="line"><span class="cl"><span class="nl">LoadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">apphelp</span><span class="p">.</span><span class="n">dll</span><span class="p">,</span><span class="n">Image</span> <span class="n">id</span><span class="o">=</span><span class="mi">5</span>
+</span></span><span class="line"><span class="cl"><span class="nl">LoadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">AcLayers</span><span class="p">.</span><span class="n">dll</span><span class="p">,</span><span class="n">Image</span> <span class="n">id</span><span class="o">=</span><span class="mi">6</span>
+</span></span><span class="line"><span class="cl"><span class="nl">LoadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">msvcrt</span><span class="p">.</span><span class="n">dll</span><span class="p">,</span><span class="n">Image</span> <span class="n">id</span><span class="o">=</span><span class="mi">7</span>
+</span></span><span class="line"><span class="cl"><span class="nl">LoadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">gdi32</span><span class="p">.</span><span class="n">dll</span><span class="p">,</span><span class="n">Image</span> <span class="n">id</span><span class="o">=</span><span class="mi">8</span>
+</span></span><span class="line"><span class="cl"><span class="nl">LoadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">win32u</span><span class="p">.</span><span class="n">dll</span><span class="p">,</span><span class="n">Image</span> <span class="n">id</span><span class="o">=</span><span class="mi">9</span>
+</span></span><span class="line"><span class="cl"><span class="nl">LoadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">gdi32full</span><span class="p">.</span><span class="n">dll</span><span class="p">,</span><span class="n">Image</span> <span class="n">id</span><span class="o">=</span><span class="mi">10</span>
+</span></span><span class="line"><span class="cl"><span class="nl">LoadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">msvcp_win</span><span class="p">.</span><span class="n">dll</span><span class="p">,</span><span class="n">Image</span> <span class="n">id</span><span class="o">=</span><span class="mi">11</span>
+</span></span><span class="line"><span class="cl"><span class="nl">LoadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">ucrtbase</span><span class="p">.</span><span class="n">dll</span><span class="p">,</span><span class="n">Image</span> <span class="n">id</span><span class="o">=</span><span class="mi">12</span>
+</span></span><span class="line"><span class="cl"><span class="nl">LoadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">user32</span><span class="p">.</span><span class="n">dll</span><span class="p">,</span><span class="n">Image</span> <span class="n">id</span><span class="o">=</span><span class="mi">13</span>
+</span></span><span class="line"><span class="cl"><span class="nl">LoadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">shlwapi</span><span class="p">.</span><span class="n">dll</span><span class="p">,</span><span class="n">Image</span> <span class="n">id</span><span class="o">=</span><span class="mi">14</span>
+</span></span><span class="line"><span class="cl"><span class="nl">LoadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">rpcrt4</span><span class="p">.</span><span class="n">dll</span><span class="p">,</span><span class="n">Image</span> <span class="n">id</span><span class="o">=</span><span class="mi">15</span>
+</span></span><span class="line"><span class="cl"><span class="nl">LoadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">imm32</span><span class="p">.</span><span class="n">dll</span><span class="p">,</span><span class="n">Image</span> <span class="n">id</span><span class="o">=</span><span class="mi">16</span>
+</span></span><span class="line"><span class="cl"><span class="nl">LoadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">vcruntime140</span><span class="p">.</span><span class="n">dll</span><span class="p">,</span><span class="n">Image</span> <span class="n">id</span><span class="o">=</span><span class="mi">17</span>
+</span></span><span class="line"><span class="cl"><span class="n">done</span>
+</span></span><span class="line"><span class="cl"><span class="nl">LoadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">kernel</span><span class="p">.</span><span class="n">appcore</span><span class="p">.</span><span class="n">dll</span><span class="p">,</span><span class="n">Image</span> <span class="n">id</span><span class="o">=</span><span class="mi">18</span>
+</span></span><span class="line"><span class="cl"><span class="nl">UnloadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">pin</span><span class="err">\\</span><span class="n">source</span><span class="err">\\</span><span class="n">tools</span><span class="err">\\</span><span class="n">MyPinTool</span><span class="err">\\</span><span class="n">Release</span><span class="err">\\</span><span class="n">ExercisePin</span><span class="p">.</span><span class="n">exe</span>
+</span></span><span class="line"><span class="cl"><span class="nl">UnloadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">kernel32</span><span class="p">.</span><span class="n">dll</span>
+</span></span><span class="line"><span class="cl"><span class="nl">UnloadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">KernelBase</span><span class="p">.</span><span class="n">dll</span>
+</span></span><span class="line"><span class="cl"><span class="nl">UnloadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">ntdll</span><span class="p">.</span><span class="n">dll</span>
+</span></span><span class="line"><span class="cl"><span class="nl">UnloadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">apphelp</span><span class="p">.</span><span class="n">dll</span>
+</span></span><span class="line"><span class="cl"><span class="nl">UnloadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">AcLayers</span><span class="p">.</span><span class="n">dll</span>
+</span></span><span class="line"><span class="cl"><span class="nl">UnloadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">msvcrt</span><span class="p">.</span><span class="n">dll</span>
+</span></span><span class="line"><span class="cl"><span class="nl">UnloadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">gdi32</span><span class="p">.</span><span class="n">dll</span>
+</span></span><span class="line"><span class="cl"><span class="nl">UnloadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">win32u</span><span class="p">.</span><span class="n">dll</span>
+</span></span><span class="line"><span class="cl"><span class="nl">UnloadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">gdi32full</span><span class="p">.</span><span class="n">dll</span>
+</span></span><span class="line"><span class="cl"><span class="nl">UnloadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">msvcp_win</span><span class="p">.</span><span class="n">dll</span>
+</span></span><span class="line"><span class="cl"><span class="nl">UnloadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">ucrtbase</span><span class="p">.</span><span class="n">dll</span>
+</span></span><span class="line"><span class="cl"><span class="nl">UnloadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">user32</span><span class="p">.</span><span class="n">dll</span>
+</span></span><span class="line"><span class="cl"><span class="nl">UnloadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">shlwapi</span><span class="p">.</span><span class="n">dll</span>
+</span></span><span class="line"><span class="cl"><span class="nl">UnloadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">rpcrt4</span><span class="p">.</span><span class="n">dll</span>
+</span></span><span class="line"><span class="cl"><span class="nl">UnloadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">imm32</span><span class="p">.</span><span class="n">dll</span>
+</span></span><span class="line"><span class="cl"><span class="nl">UnloadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">vcruntime140</span><span class="p">.</span><span class="n">dll</span>
+</span></span><span class="line"><span class="cl"><span class="nl">UnloadingC</span><span class="p">:</span><span class="err">\\</span><span class="n">Windows</span><span class="err">\\</span><span class="n">SysWOW64</span><span class="err">\\</span><span class="n">kernel</span><span class="p">.</span><span class="n">appcore</span><span class="p">.</span><span class="n">dll</span>
+</span></span></code></pre></div><h2 id="漏洞插件学习">漏洞插件学习</h2>
+<p><strong><strong>目标/访客程序 (ExercisePin.exe)</strong></strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">do_nothing</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="o">*</span><span class="n">xyz</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="nf">malloc</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">free</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nf">do_nothing</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kt">char</span> <span class="o">*</span><span class="n">A</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="nf">malloc</span><span class="p">(</span><span class="mi">128</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">char</span> <span class="o">*</span><span class="n">B</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="nf">malloc</span><span class="p">(</span><span class="mi">128</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">char</span> <span class="o">*</span><span class="n">C</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="nf">malloc</span><span class="p">(</span><span class="mi">128</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nf">free</span><span class="p">(</span><span class="n">A</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">free</span><span class="p">(</span><span class="n">C</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">do_nothing</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">free</span><span class="p">(</span><span class="n">C</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nf">puts</span><span class="p">(</span><span class="s">&#34;done&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><strong>Heap漏洞检测代码</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;pin.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;map&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="n">using</span> <span class="n">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">map</span><span class="o">&lt;</span><span class="n">ADDRINT</span><span class="p">,</span> <span class="kt">bool</span><span class="o">&gt;</span> <span class="n">MallocMap</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">ofstream</span> <span class="n">LogFile</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">KNOB</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="nf">LogFileName</span><span class="p">(</span><span class="n">KNOB_MODE_WRITEONCE</span><span class="p">,</span> <span class="s">&#34;pintool&#34;</span><span class="p">,</span> <span class="s">&#34;o&#34;</span><span class="p">,</span> <span class="s">&#34;memprofile.out&#34;</span><span class="p">,</span> <span class="s">&#34;Memory trace file name&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">VOID</span> <span class="nf">LogAfterMalloc</span><span class="p">(</span><span class="n">ADDRINT</span> <span class="n">addr</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">addr</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;[-] Error: malloc() return value was NULL.&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">map</span><span class="o">&lt;</span><span class="n">ADDRINT</span><span class="p">,</span> <span class="kt">bool</span><span class="o">&gt;::</span><span class="n">iterator</span> <span class="n">it</span> <span class="o">=</span> <span class="n">MallocMap</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="n">addr</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">it</span> <span class="o">!=</span> <span class="n">MallocMap</span><span class="p">.</span><span class="nf">end</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="k">else</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;[-] Error: allocating memory not freed!?!&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">else</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">MallocMap</span><span class="p">.</span><span class="nf">insert</span><span class="p">(</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">ADDRINT</span><span class="p">,</span> <span class="kt">bool</span><span class="o">&gt;</span><span class="p">(</span><span class="n">addr</span><span class="p">,</span> <span class="nb">false</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">		<span class="n">LogFile</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\\</span><span class="s">t</span><span class="se">\\</span><span class="s">t= 0x&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">hex</span> <span class="o">&lt;&lt;</span> <span class="n">addr</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">VOID</span> <span class="nf">LogBeforeMalloc</span><span class="p">(</span><span class="n">ADDRINT</span> <span class="n">size</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">LogFile</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;[*] malloc(&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">dec</span> <span class="o">&lt;&lt;</span> <span class="n">size</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;)&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">VOID</span> <span class="nf">LogFree</span><span class="p">(</span><span class="n">ADDRINT</span> <span class="n">addr</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">map</span><span class="o">&lt;</span><span class="n">ADDRINT</span><span class="p">,</span> <span class="kt">bool</span><span class="o">&gt;::</span><span class="n">iterator</span> <span class="n">it</span> <span class="o">=</span> <span class="n">MallocMap</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="n">addr</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">it</span> <span class="o">!=</span> <span class="n">MallocMap</span><span class="p">.</span><span class="nf">end</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">LogFile</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;[*] Memory at address 0x&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">hex</span> <span class="o">&lt;&lt;</span> <span class="n">addr</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; has been freed more than once.&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// Double free
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>    <span class="c1">// Mark it as freed
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">LogFile</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;[*] free(0x&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">hex</span> <span class="o">&lt;&lt;</span> <span class="n">addr</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;)&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="n">LogFile</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;[*] Freeing unallocated memory at address 0x&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">hex</span> <span class="o">&lt;&lt;</span> <span class="n">addr</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;.&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">VOID</span> <span class="nf">CustomInstrumentation</span><span class="p">(</span><span class="n">IMG</span> <span class="n">img</span><span class="p">,</span> <span class="n">VOID</span><span class="o">*</span> <span class="n">v</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="n">SYM</span> <span class="n">sym</span> <span class="o">=</span> <span class="nf">IMG_RegsymHead</span><span class="p">(</span><span class="n">img</span><span class="p">);</span> <span class="nf">SYM_Valid</span><span class="p">(</span><span class="n">sym</span><span class="p">);</span> <span class="n">sym</span> <span class="o">=</span> <span class="nf">SYM_Next</span><span class="p">(</span><span class="n">sym</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//去除修饰的函数名
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">string</span> <span class="n">undFuncName</span> <span class="o">=</span> <span class="nf">PIN_UndecorateSymbolName</span><span class="p">(</span><span class="nf">SYM_Name</span><span class="p">(</span><span class="n">sym</span><span class="p">),</span> <span class="n">UNDECORATION_NAME_ONLY</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">undFuncName</span> <span class="o">==</span> <span class="s">&#34;malloc&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">//函数地址
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">RTN</span> <span class="n">allocRtn</span> <span class="o">=</span> <span class="nf">RTN_FindByAddress</span><span class="p">(</span><span class="nf">IMG_LowAddress</span><span class="p">(</span><span class="n">img</span><span class="p">)</span> <span class="o">+</span> <span class="nf">SYM_Value</span><span class="p">(</span><span class="n">sym</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="nf">RTN_Valid</span><span class="p">(</span><span class="n">allocRtn</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">//RTN级别插桩要先执行Open,RTN相当于函数级别
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nf">RTN_Open</span><span class="p">(</span><span class="n">allocRtn</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                <span class="c1">// Record Malloc size
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="c1">//IARG_FUNCARG_ENTRYPOINT_VALUE入口值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="c1">//Type: ADDRINT. Integer argument n. Valid only at the entry point of a routine. (First argument number is 0.)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="c1">//文档标注需要加0
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nf">RTN_InsertCall</span><span class="p">(</span><span class="n">allocRtn</span><span class="p">,</span> <span class="n">IPOINT_BEFORE</span><span class="p">,</span> <span class="p">(</span><span class="n">AFUNPTR</span><span class="p">)</span><span class="n">LogBeforeMalloc</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">IARG_FUNCARG_ENTRYPOINT_VALUE</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">IARG_END</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                <span class="c1">// Record Malloc return address
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="c1">//IARG_FUNCRET_EXITPOINT_VALUE指向返回函数的指针
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nf">RTN_InsertCall</span><span class="p">(</span><span class="n">allocRtn</span><span class="p">,</span> <span class="n">IPOINT_AFTER</span><span class="p">,</span> <span class="p">(</span><span class="n">AFUNPTR</span><span class="p">)</span><span class="n">LogAfterMalloc</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">IARG_FUNCRET_EXITPOINT_VALUE</span><span class="p">,</span> <span class="n">IARG_END</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                <span class="nf">RTN_Close</span><span class="p">(</span><span class="n">allocRtn</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">undFuncName</span> <span class="o">==</span> <span class="s">&#34;free&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">RTN</span> <span class="n">freeRtn</span> <span class="o">=</span> <span class="nf">RTN_FindByAddress</span><span class="p">(</span><span class="nf">IMG_LowAddress</span><span class="p">(</span><span class="n">img</span><span class="p">)</span> <span class="o">+</span> <span class="nf">SYM_Value</span><span class="p">(</span><span class="n">sym</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="nf">RTN_Valid</span><span class="p">(</span><span class="n">freeRtn</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nf">RTN_Open</span><span class="p">(</span><span class="n">freeRtn</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                <span class="nf">RTN_InsertCall</span><span class="p">(</span><span class="n">freeRtn</span><span class="p">,</span> <span class="n">IPOINT_BEFORE</span><span class="p">,</span> <span class="p">(</span><span class="n">AFUNPTR</span><span class="p">)</span><span class="n">LogFree</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">IARG_FUNCARG_ENTRYPOINT_VALUE</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">IARG_END</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                <span class="nf">RTN_Close</span><span class="p">(</span><span class="n">freeRtn</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">VOID</span> <span class="nf">FinalFunc</span><span class="p">(</span><span class="n">INT32</span> <span class="n">code</span><span class="p">,</span> <span class="n">VOID</span><span class="o">*</span> <span class="n">v</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">ADDRINT</span><span class="p">,</span> <span class="kt">bool</span><span class="o">&gt;</span> <span class="nl">p</span> <span class="p">:</span> <span class="n">MallocMap</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">p</span><span class="p">.</span><span class="n">second</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">LogFile</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;[*] Memory at address 0x&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">hex</span> <span class="o">&lt;&lt;</span> <span class="n">p</span><span class="p">.</span><span class="n">first</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; allocated but not freed&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">LogFile</span><span class="p">.</span><span class="nf">close</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//image级别插桩需要先对Symbols初始化
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">PIN_InitSymbols</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">PIN_Init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">LogFile</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="n">LogFileName</span><span class="p">.</span><span class="nf">Value</span><span class="p">().</span><span class="nf">c_str</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">IMG_AddInstrumentFunction</span><span class="p">(</span><span class="n">CustomInstrumentation</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">PIN_AddFiniFunction</span><span class="p">(</span><span class="n">FinalFunc</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">PIN_StartProgram</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>中间出了点bug,malloclogafter没有运行，重新复制一下就好了，奇怪</p>
+<h3 id="查看函数的第一个参数">查看函数的第一个参数</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;fstream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span><span class="cpf">&#34;pin.H&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="n">using</span> <span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">using</span> <span class="n">std</span><span class="o">::</span><span class="n">ofstream</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">using</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">using</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">using</span> <span class="n">std</span><span class="o">::</span><span class="n">ios</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">using</span> <span class="n">std</span><span class="o">::</span><span class="n">hex</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//定义输出文件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">KNOB</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="nf">KnobOutputFile</span><span class="p">(</span><span class="n">KNOB_MODE_WRITEONCE</span><span class="p">,</span> <span class="s">&#34;pintool&#34;</span><span class="p">,</span> <span class="s">&#34;o&#34;</span><span class="p">,</span> <span class="s">&#34;vuleyes.out&#34;</span><span class="p">,</span> <span class="s">&#34;specify filename~&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">ofstream</span> <span class="n">TraceFile</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//帮助信息
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">INT32</span> <span class="nf">Usage</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">PIN_ERROR</span><span class="p">(</span><span class="s">&#34;Something Wrong!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">VOID</span> <span class="nf">MallocBefore</span><span class="p">(</span><span class="n">CHAR</span><span class="o">*</span> <span class="n">name</span><span class="p">,</span> <span class="n">ADDRINT</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cerr</span><span class="o">&lt;&lt;</span><span class="n">name</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;(&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">size</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;)&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">TraceFile</span> <span class="o">&lt;&lt;</span> <span class="n">name</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;(&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">size</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;)&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">VOID</span> <span class="nf">MallocAfter</span><span class="p">(</span><span class="n">ADDRINT</span> <span class="n">ret</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cerr</span> <span class="o">&lt;&lt;</span><span class="s">&#34;Return:&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">ret</span>  <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">VOID</span> <span class="nf">FreeBefore</span><span class="p">(</span><span class="n">CHAR</span><span class="o">*</span> <span class="n">name</span><span class="p">,</span> <span class="n">ADDRINT</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="n">name</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;(&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">size</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;)&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">TraceFile</span> <span class="o">&lt;&lt;</span> <span class="n">name</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;(&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">size</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;)&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">VOID</span> <span class="nf">ImageLoad</span><span class="p">(</span><span class="n">IMG</span> <span class="n">img</span><span class="p">,</span> <span class="n">VOID</span><span class="o">*</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">	<span class="c1">//cerr&lt;&lt; &#34;Loading&#34; &lt;&lt; IMG_Name(img) &lt;&lt; &#34;,Image id=&#34; &lt;&lt; IMG_Id(img) &lt;&lt; endl;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">/////////////////////////////////////////
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">RTN</span> <span class="n">mallocRtn</span> <span class="o">=</span> <span class="nf">RTN_FindByName</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="s">&#34;malloc&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="nf">RTN_Valid</span><span class="p">(</span><span class="n">mallocRtn</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">RTN_Open</span><span class="p">(</span><span class="n">mallocRtn</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">//不太理解这里IARG_ADDRINT用法
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="c1">//理解的话这是malloc的类型？？？？
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="c1">//换成IARG_PTR也正常运行
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nf">RTN_InsertCall</span><span class="p">(</span><span class="n">mallocRtn</span><span class="p">,</span> <span class="n">IPOINT_BEFORE</span><span class="p">,</span> <span class="p">(</span><span class="n">AFUNPTR</span><span class="p">)</span><span class="n">MallocBefore</span><span class="p">,</span> <span class="n">IARG_PTR</span><span class="p">,</span> <span class="s">&#34;malloc&#34;</span><span class="p">,</span> <span class="n">IARG_FUNCARG_ENTRYPOINT_VALUE</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">IARG_END</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">RTN_InsertCall</span><span class="p">(</span><span class="n">mallocRtn</span><span class="p">,</span> <span class="n">IPOINT_AFTER</span><span class="p">,</span> <span class="p">(</span><span class="n">AFUNPTR</span><span class="p">)</span><span class="n">MallocAfter</span><span class="p">,</span> <span class="n">IARG_FUNCRET_EXITPOINT_VALUE</span><span class="p">,</span> <span class="n">IARG_END</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="nf">RTN_Close</span><span class="p">(</span><span class="n">mallocRtn</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="n">RTN</span> <span class="n">freeRtn</span> <span class="o">=</span> <span class="nf">RTN_FindByName</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="s">&#34;free&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="nf">RTN_Valid</span><span class="p">(</span><span class="n">freeRtn</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">RTN_Open</span><span class="p">(</span><span class="n">freeRtn</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		<span class="nf">RTN_InsertCall</span><span class="p">(</span><span class="n">freeRtn</span><span class="p">,</span> <span class="n">IPOINT_BEFORE</span><span class="p">,</span> <span class="p">(</span><span class="n">AFUNPTR</span><span class="p">)</span><span class="n">FreeBefore</span><span class="p">,</span> <span class="n">IARG_PTR</span><span class="p">,</span> <span class="s">&#34;free&#34;</span><span class="p">,</span> <span class="n">IARG_FUNCARG_ENTRYPOINT_VALUE</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">IARG_END</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="nf">RTN_Close</span><span class="p">(</span><span class="n">freeRtn</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">VOID</span> <span class="nf">ImageUnload</span><span class="p">(</span><span class="n">IMG</span> <span class="n">img</span><span class="p">,</span> <span class="n">VOID</span><span class="o">*</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">	<span class="c1">//cerr &lt;&lt; &#34;Unloading&#34; &lt;&lt; IMG_Name(img) &lt;&lt; endl;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">VOID</span> <span class="nf">Fini</span><span class="p">(</span><span class="n">INT32</span> <span class="n">code</span><span class="p">,</span> <span class="n">VOID</span><span class="o">*</span> <span class="n">V</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">TraceFile</span><span class="p">.</span><span class="nf">is_open</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">TraceFile</span><span class="p">.</span><span class="nf">close</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//要使用名称得先初始化符合
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nf">PIN_InitSymbols</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="nf">PIN_Init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">))</span> <span class="k">return</span> <span class="nf">Usage</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//c_str()返回当前字符串的首字符地址
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">TraceFile</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="n">KnobOutputFile</span><span class="p">.</span><span class="nf">Value</span><span class="p">().</span><span class="nf">c_str</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//ios::showbase是显示进制
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">TraceFile</span> <span class="o">&lt;&lt;</span> <span class="n">hex</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">TraceFile</span><span class="p">.</span><span class="nf">setf</span><span class="p">(</span><span class="n">ios</span><span class="o">::</span><span class="n">showbase</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">IMG_AddInstrumentFunction</span><span class="p">(</span><span class="n">ImageLoad</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">IMG_AddUnloadFunction</span><span class="p">(</span><span class="n">ImageUnload</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nf">PIN_AddFiniFunction</span><span class="p">(</span><span class="n">Fini</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nf">PIN_StartProgram</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="bak">bak</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;fstream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span><span class="cpf">&#34;pin.H&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="cp">#ifdef _WIN32
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define flagSystem 0
+</span></span></span><span class="line"><span class="cl"><span class="cp">#elif __linux__
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define flagSystem 1
+</span></span></span><span class="line"><span class="cl"><span class="cp">#elif __APPLE__
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define flagSystem 2
+</span></span></span><span class="line"><span class="cl"><span class="cp">#endif
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="n">namespace</span> <span class="n">WINDOWS</span> 
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um\\windows.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">using</span> <span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">using</span> <span class="n">std</span><span class="o">::</span><span class="n">ofstream</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">using</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">using</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">using</span> <span class="n">std</span><span class="o">::</span><span class="n">ios</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">using</span> <span class="n">std</span><span class="o">::</span><span class="n">hex</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">using</span> <span class="n">std</span><span class="o">::</span><span class="n">dec</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//定义输出文件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">KNOB</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="nf">KnobOutputFile</span><span class="p">(</span><span class="n">KNOB_MODE_WRITEONCE</span><span class="p">,</span> <span class="s">&#34;pintool&#34;</span><span class="p">,</span> <span class="s">&#34;o&#34;</span><span class="p">,</span> <span class="s">&#34;vuleyes.out&#34;</span><span class="p">,</span> <span class="s">&#34;specify filename~&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">ofstream</span> <span class="n">TraceFile</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//帮助信息
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">INT32</span> <span class="nf">Usage</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">PIN_ERROR</span><span class="p">(</span><span class="s">&#34;Something Wrong!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">VOID</span> <span class="nf">MallocBefore</span><span class="p">(</span><span class="n">CHAR</span><span class="o">*</span> <span class="n">name</span><span class="p">,</span> <span class="n">ADDRINT</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cerr</span><span class="o">&lt;&lt;</span><span class="n">name</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;(&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">size</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;)&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">TraceFile</span> <span class="o">&lt;&lt;</span> <span class="n">name</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;(&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">size</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;)&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">VOID</span> <span class="nf">MallocAfter</span><span class="p">(</span><span class="n">ADDRINT</span> <span class="n">ret</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cerr</span> <span class="o">&lt;&lt;</span><span class="s">&#34;Return:&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">ret</span>  <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">VOID</span> <span class="nf">FreeBefore</span><span class="p">(</span><span class="n">CHAR</span><span class="o">*</span> <span class="n">name</span><span class="p">,</span> <span class="n">ADDRINT</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="n">name</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;(&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">size</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;)&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">TraceFile</span> <span class="o">&lt;&lt;</span> <span class="n">name</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;(&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">size</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;)&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">VOID</span> <span class="nf">Before</span><span class="p">(</span><span class="n">CHAR</span><span class="o">*</span> <span class="n">name</span><span class="p">,</span> <span class="n">WINDOWS</span><span class="o">::</span><span class="n">HANDLE</span> <span class="n">hHeap</span><span class="p">,</span> <span class="n">WINDOWS</span><span class="o">::</span><span class="n">DWORD</span> <span class="n">dwFlags</span><span class="p">,</span> <span class="n">WINDOWS</span><span class="o">::</span><span class="n">DWORD</span> <span class="n">dwBytes</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;Before: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">name</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;(&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">hex</span> <span class="o">&lt;&lt;</span> <span class="n">hHeap</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;, &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">dwFlags</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;, &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">dwBytes</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;)&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">dec</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">VOID</span> <span class="nf">After</span><span class="p">(</span><span class="n">CHAR</span><span class="o">*</span> <span class="n">name</span><span class="p">,</span> <span class="n">ADDRINT</span> <span class="n">ret</span><span class="p">)</span> <span class="p">{</span> <span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;After: &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">name</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;  returns &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">hex</span> <span class="o">&lt;&lt;</span> <span class="n">ret</span> <span class="o">&lt;&lt;</span> <span class="n">dec</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">VOID</span> <span class="nf">ImageLoad</span><span class="p">(</span><span class="n">IMG</span> <span class="n">img</span><span class="p">,</span> <span class="n">VOID</span><span class="o">*</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">	<span class="c1">//cerr&lt;&lt; &#34;Loading&#34; &lt;&lt; IMG_Name(img) &lt;&lt; &#34;,Image id=&#34; &lt;&lt; IMG_Id(img) &lt;&lt; endl;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">/////////////////////////////////////////
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//flagSystem==0
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">if</span> <span class="p">(</span><span class="n">flagSystem</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="p">(</span><span class="n">SYM</span> <span class="n">sym</span> <span class="o">=</span> <span class="nf">IMG_RegsymHead</span><span class="p">(</span><span class="n">img</span><span class="p">);</span> <span class="nf">SYM_Valid</span><span class="p">(</span><span class="n">sym</span><span class="p">);</span> <span class="n">sym</span> <span class="o">=</span> <span class="nf">SYM_Next</span><span class="p">(</span><span class="n">sym</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">string</span> <span class="n">undFuncName</span> <span class="o">=</span> <span class="nf">PIN_UndecorateSymbolName</span><span class="p">(</span><span class="nf">SYM_Name</span><span class="p">(</span><span class="n">sym</span><span class="p">),</span> <span class="n">UNDECORATION_NAME_ONLY</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="p">(</span><span class="n">undFuncName</span> <span class="o">==</span> <span class="s">&#34;RtlAllocHeap &#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="n">RTN</span> <span class="n">allocRtn</span> <span class="o">=</span> <span class="nf">RTN_FindByAddress</span><span class="p">(</span><span class="nf">IMG_LowAddress</span><span class="p">(</span><span class="n">img</span><span class="p">)</span> <span class="o">+</span> <span class="nf">SYM_Value</span><span class="p">(</span><span class="n">sym</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">				<span class="k">if</span> <span class="p">(</span><span class="nf">RTN_Valid</span><span class="p">(</span><span class="n">allocRtn</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">					<span class="nf">RTN_Open</span><span class="p">(</span><span class="n">allocRtn</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">					<span class="nf">RTN_InsertCall</span><span class="p">(</span><span class="n">allocRtn</span><span class="p">,</span> <span class="n">IPOINT_BEFORE</span><span class="p">,</span> <span class="p">(</span><span class="n">AFUNPTR</span><span class="p">)</span><span class="n">Before</span><span class="p">,</span> <span class="n">IARG_ADDRINT</span><span class="p">,</span> <span class="s">&#34;RtlAllocateHeap&#34;</span><span class="p">,</span> <span class="n">IARG_FUNCARG_ENTRYPOINT_VALUE</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">IARG_FUNCARG_ENTRYPOINT_VALUE</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">IARG_FUNCARG_ENTRYPOINT_VALUE</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">						<span class="mi">2</span><span class="p">,</span> <span class="n">IARG_END</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">					<span class="nf">RTN_InsertCall</span><span class="p">(</span><span class="n">allocRtn</span><span class="p">,</span> <span class="n">IPOINT_AFTER</span><span class="p">,</span> <span class="p">(</span><span class="n">AFUNPTR</span><span class="p">)</span><span class="n">After</span><span class="p">,</span> <span class="n">IARG_ADDRINT</span><span class="p">,</span> <span class="s">&#34;RtlAllocateHeap&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">						<span class="n">IARG_FUNCRET_EXITPOINT_VALUE</span><span class="p">,</span> <span class="n">IARG_END</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">					<span class="nf">RTN_Close</span><span class="p">(</span><span class="n">allocRtn</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">				<span class="p">}</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">			<span class="n">TraceFile</span> <span class="o">&lt;&lt;</span> <span class="n">undFuncName</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">//flagSystem==1 mean linux
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">flagSystem</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">RTN</span> <span class="n">mallocRtn</span> <span class="o">=</span> <span class="nf">RTN_FindByName</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="s">&#34;malloc&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="nf">RTN_Valid</span><span class="p">(</span><span class="n">mallocRtn</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nf">RTN_Open</span><span class="p">(</span><span class="n">mallocRtn</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">//不太理解这里IARG_ADDRINT用法
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="c1">//理解的话这是malloc的类型？？？？
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="c1">//换成IARG_PTR也正常运行
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="nf">RTN_InsertCall</span><span class="p">(</span><span class="n">mallocRtn</span><span class="p">,</span> <span class="n">IPOINT_BEFORE</span><span class="p">,</span> <span class="p">(</span><span class="n">AFUNPTR</span><span class="p">)</span><span class="n">MallocBefore</span><span class="p">,</span> <span class="n">IARG_PTR</span><span class="p">,</span> <span class="s">&#34;malloc&#34;</span><span class="p">,</span> <span class="n">IARG_FUNCARG_ENTRYPOINT_VALUE</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">IARG_END</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="nf">RTN_InsertCall</span><span class="p">(</span><span class="n">mallocRtn</span><span class="p">,</span> <span class="n">IPOINT_AFTER</span><span class="p">,</span> <span class="p">(</span><span class="n">AFUNPTR</span><span class="p">)</span><span class="n">MallocAfter</span><span class="p">,</span> <span class="n">IARG_FUNCRET_EXITPOINT_VALUE</span><span class="p">,</span> <span class="n">IARG_END</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			<span class="nf">RTN_Close</span><span class="p">(</span><span class="n">mallocRtn</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="n">RTN</span> <span class="n">freeRtn</span> <span class="o">=</span> <span class="nf">RTN_FindByName</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="s">&#34;free&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="nf">RTN_Valid</span><span class="p">(</span><span class="n">freeRtn</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nf">RTN_Open</span><span class="p">(</span><span class="n">freeRtn</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			<span class="nf">RTN_InsertCall</span><span class="p">(</span><span class="n">freeRtn</span><span class="p">,</span> <span class="n">IPOINT_BEFORE</span><span class="p">,</span> <span class="p">(</span><span class="n">AFUNPTR</span><span class="p">)</span><span class="n">FreeBefore</span><span class="p">,</span> <span class="n">IARG_PTR</span><span class="p">,</span> <span class="s">&#34;free&#34;</span><span class="p">,</span> <span class="n">IARG_FUNCARG_ENTRYPOINT_VALUE</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">IARG_END</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			<span class="nf">RTN_Close</span><span class="p">(</span><span class="n">freeRtn</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">VOID</span> <span class="nf">ImageUnload</span><span class="p">(</span><span class="n">IMG</span> <span class="n">img</span><span class="p">,</span> <span class="n">VOID</span><span class="o">*</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">	<span class="c1">//cerr &lt;&lt; &#34;Unloading&#34; &lt;&lt; IMG_Name(img) &lt;&lt; endl;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">VOID</span> <span class="nf">Fini</span><span class="p">(</span><span class="n">INT32</span> <span class="n">code</span><span class="p">,</span> <span class="n">VOID</span><span class="o">*</span> <span class="n">V</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">TraceFile</span><span class="p">.</span><span class="nf">is_open</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">TraceFile</span><span class="p">.</span><span class="nf">close</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//要使用名称得先初始化符号
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="n">flagSystem</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">PIN_InitSymbols</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="nf">PIN_Init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">))</span> <span class="k">return</span> <span class="nf">Usage</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//c_str()返回当前字符串的首字符地址
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">TraceFile</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="n">KnobOutputFile</span><span class="p">.</span><span class="nf">Value</span><span class="p">().</span><span class="nf">c_str</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//ios::showbase是显示进制
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">TraceFile</span> <span class="o">&lt;&lt;</span> <span class="n">hex</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">TraceFile</span><span class="p">.</span><span class="nf">setf</span><span class="p">(</span><span class="n">ios</span><span class="o">::</span><span class="n">showbase</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">IMG_AddInstrumentFunction</span><span class="p">(</span><span class="n">ImageLoad</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">IMG_AddUnloadFunction</span><span class="p">(</span><span class="n">ImageUnload</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nf">PIN_AddFiniFunction</span><span class="p">(</span><span class="n">Fini</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nf">PIN_StartProgram</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="自定义pintool代码">自定义Pintool代码</h2>
+<p>在pin/source/tools目录下的MyPinTool项目，直接修改就行，修改前做一次备份，用以写第二个代码</p>
+<h1 id="漏洞检测规则">漏洞检测规则</h1>
+<p>Double Free</p>
+<p><strong>Negative mallocs</strong></p>
+<p>检测malloc(size)中size是否小于0</p>
+<p>针对malloc和calloc</p>
+<p>例如在32位系统中，malloc(-1)会尝试分配4GB内存</p>
+<p><strong>Zero allocations</strong></p>
+<p>检测malloc(size)中size是否等于0</p>
+<p>针对malloc和calloc</p>
+<p>malloc(0)通常返回当前系统允许的堆的最小内存块，如果超过这个大小的数据被写入这个buffer,就会造成堆溢出</p>
+<h1 id="附录">附录</h1>
+<h2 id="malloc">malloc</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">void</span> <span class="o">*</span><span class="nf">malloc</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">n</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">该函数返回对应大小字节的内存块的指针</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">此外，该函数还对一些异常情况进行了处理</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">当</span><span class="n">n</span><span class="o">=</span><span class="mi">0</span><span class="err">时，返回当前系统允许的堆的最小内存块</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">当</span><span class="n">n</span><span class="err">为负数时，由于在大多数系统中，</span><span class="n">size_t</span><span class="err">是无符号数，所以程序就会申请很大的内存空间，但通常来说都会失败，因为系统没有那么多的内存可以分配</span>
+</span></span></code></pre></div><h2 id="free">free</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">free</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">p</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">该函数会释放由</span><span class="n">p</span><span class="err">所指向的内存块。这个内存块有可能是通过</span><span class="n">malloc</span><span class="err">函数得到的，也有可能是通过相关的函数</span><span class="n">realloc</span><span class="err">得到的</span> <span class="err">该函数还对异常情况进行了一下处理</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">当</span><span class="n">p</span><span class="err">为空指针时，函数不执行任何操作</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">当</span><span class="n">p</span><span class="err">已经被释放之后，再次释放会出现错误的效果，这其实就是</span><span class="kt">double</span> <span class="n">free</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">除了被禁用（</span><span class="n">mallocpt</span><span class="err">）的情况下，当释放很大的内存空间时，程序会将这些内存空间还给系统，以便减小程序所使用的内存空间</span>
+</span></span></code></pre></div><h1 id="错误">错误</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="err">严重性</span>	<span class="err">代码</span>	<span class="err">说明</span>	<span class="err">项目</span>	<span class="err">文件</span>	<span class="err">行</span>	<span class="err">禁止显示状态</span>
+</span></span><span class="line"><span class="cl"><span class="err">错误</span>	<span class="n">C1189</span>	<span class="err">#</span><span class="nl">error</span><span class="p">:</span>  <span class="n">Must</span> <span class="n">define</span> <span class="n">_WINDOWS_H_PATH_</span>	<span class="n">MyPinTool</span>	<span class="nl">C</span><span class="p">:</span><span class="err">\\</span><span class="n">pin</span><span class="err">\\</span><span class="n">extras</span><span class="err">\\</span><span class="n">crt</span><span class="err">\\</span><span class="n">include</span><span class="err">\\</span><span class="n">Windows</span><span class="p">.</span><span class="n">h</span>	<span class="mi">36</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//include&lt;Windows.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#include</span><span class="cpf">&lt;C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um\\windows.h&gt;</span><span class="cp">
+</span></span></span></code></pre></div><h1 id="参考链接">参考链接</h1>
+<p><a href="https://www.istt.org.cn/NewsDetail/2672118.html">【安全红队】CPU侧信道之Intel Pin工具的使用</a></p>
+<p><a href="https://software.intel.com/sites/landingpage/pintool/docs/98547/Pin/html/index.html">Pin: Pin 3.22 User Guide</a></p>
+<p><a href="https://github.com/joxeankoret/membugtool"></a><a href="https://github.com/joxeankoret/membugtool">https://github.com/joxeankoret/membugtool</a></p>
+
+            </div>
+        </article>
+    </main>
+<div class="disqus markdown">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "vincebye" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </div>
+</div>
+
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/Vincebye/" target="_blank" rel="noopener noreferrer me" title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/vincebye" target="_blank" rel="noopener noreferrer me" title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="index.xml" target="_blank" rel="noopener noreferrer me" title="Rss">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 11a9 9 0 0 1 9 9" />
+    <path d="M4 4a16 16 0 0 1 16 16" />
+    <circle cx="5" cy="19" r="1" />
+</svg>
+</a></div>
+    <small class="footer_copyright">
+        © 2023 Z.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noreferrer noopener">Hugo blog awesome</a>
+        theme on
+        <a href="https://gohugo.io" target="_blank" rel="noreferrer noopener">Hugo</a>.
+    </small>
+</footer>
+<script src="https://vincebye.github.io/js/themeSwitchnMenu.min.2a402288242b6930b175a0722c267e2353055739b3975834df35e56d00dd8f50.js"></script></body>
+</html>

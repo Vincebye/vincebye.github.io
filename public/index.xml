@@ -6,7 +6,41 @@
     <description>Recent content on Awesome Hugo blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Apr 2023 00:38:17 +0800</lastBuildDate><atom:link href="https://vincebye.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Apr 2023 16:34:00 +0800</lastBuildDate><atom:link href="https://vincebye.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pin学习记录</title>
+      <link>https://vincebye.github.io/dbi/pin%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Thu, 13 Apr 2023 16:34:00 +0800</pubDate>
+      
+      <guid>https://vincebye.github.io/dbi/pin%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</guid>
+      <description>#插桩
+环境 windows Make&amp;amp;GCC&amp;amp;G++
+安装cygwin
+安装勾选gcc-core g++ make 在devel类别里
+然后将bin目录加入path
+编译测试项目
+64位
+使用x64 Native Tools Command Prompt for VS 2019
+cd C:\\pin\\source\\tools\\ManualExamples make all TARGET=intel64 32位
+使用x86 Native Tools Command Prompt for VS 2019，修改C:\pin\source\tools\Config\win.vars中添加一行 cd C:\\pin\\source\\tools\\ManualExamples make all VS集成Pin 在VS中选择工具→外部工具→Add
+运行 Examples Simple Instruction Count （指令插桩） 统计执行过的指令的总数
+/* * Copyright (C) 2004-2021 Intel Corporation. * SPDX-License-Identifier: MIT */ #include &amp;lt;iostream&amp;gt; #include &amp;lt;fstream&amp;gt; #include &amp;#34;pin.H&amp;#34; using std::cerr; using std::endl; using std::ios; using std::ofstream; using std::string; ofstream OutFile; // The running count of instructions is kept here // make it static to help the compiler optimize docount static UINT64 icount = 0; // This function is called before every instruction is executed //每个指令执行之前运行这个函数 VOID docount() { icount++; } // Pin calls this function every time a new instruction is encountered //每遇到一条指令，运行一次这个函数 VOID Instruction(INS ins, VOID* v) { // Insert a call to docount before every instruction, no arguments are passed //在每条指令运行之前插入一个函数来计数，没有参数传递 INS_InsertCall(ins, IPOINT_BEFORE, (AFUNPTR)docount, IARG_END); } KNOB&amp;lt; string &amp;gt; KnobOutputFile(KNOB_MODE_WRITEONCE, &amp;#34;pintool&amp;#34;, &amp;#34;o&amp;#34;, &amp;#34;inscount.</description>
+    </item>
+    
+    <item>
+      <title>IDAPython自动化代码</title>
+      <link>https://vincebye.github.io/post/idapython%E8%87%AA%E5%8A%A8%E5%8C%96%E4%BB%A3%E7%A0%81/</link>
+      <pubDate>Wed, 12 Apr 2023 15:22:00 +0800</pubDate>
+      
+      <guid>https://vincebye.github.io/post/idapython%E8%87%AA%E5%8A%A8%E5%8C%96%E4%BB%A3%E7%A0%81/</guid>
+      <description>#IDA
+单个脚本执行
+C:\\Study\\BinaryAnalyse&amp;gt;C://Pwn/IDA/ida64.exe -LC:/mylog.log -c -A -S&amp;#34;C://Study/BinaryAnalyse/analyse.py&amp;#34; C://Study/BinaryAnalyse/datas/crackme0x03.exe PS:Windows注意-S后的脚本名称需要添加双引号
+c 表示对要分析的二进制文件生成一个新的IDB文件。 -A表示以autonomous模式运行，如果不加这个选项，则会弹出图形界面。 -S 制定要执行的 plugin script。 批量执行
+//analyse.py import idc import idautils import idaapi from collections import defaultdict def analysis(): pass # 这里是分析的代码 def main(): &amp;#34;&amp;#34;&amp;#34; 控制器 &amp;#34;&amp;#34;&amp;#34; idc.auto_wait() # 等IDA分析完后才执行 analysis() idc.qexit(0) # 关闭IDA if __name__ == &amp;#34;__main__&amp;#34;: main() 批量
+//run.py # -*- coding:utf-8 -*- # =======Import ======= import os import subprocess #C:\\Study\\BinaryAnalyse\\datas #C:\\Pwn\\IDA Pro 7.6 dir_path = &amp;#34;C://Study/BinaryAnalyse/datas/&amp;#34; # 原始数据的文件夹 ida64_path = &amp;#34;C://Pwn/IDA/ida64.</description>
+    </item>
+    
     <item>
       <title>LibAFL Introduce</title>
       <link>https://vincebye.github.io/fuzzer/libafl-introduce/</link>
@@ -18,33 +52,6 @@
 资源 LibAFL Book：https://aflplus.plus/libafl-book/libafl.html 项目：https://github.com/AFLplusplus/LibAFL
 正文 baby_fuzzer 官方给出的一个简单案例用来说明如何使用LibAFL，我们摘取一部分,以下就是一个简单的fuzzer代码，看着很复杂，不如直接AFL++一把梭。
 // Create an observation channel using the signals map let observer = unsafe { StdMapObserver::from_mut_ptr(&amp;#34;signals&amp;#34;, SIGNALS_PTR, SIGNALS.len()) }; // Feedback to rate the interestingness of an input let mut feedback = MaxMapFeedback::new(&amp;amp;observer); // A feedback to choose if an input is a solution or not let mut objective = CrashFeedback::new(); // create a State from scratch let mut state = StdState::new( // RNG StdRand::with_seed(current_nanos()), // Corpus that will be evolved, we keep it in memory for performance InMemoryCorpus::new(), // Corpus in which we store solutions (crashes in this example), // on disk so the user can get them after stopping the fuzzer OnDiskCorpus::new(PathBuf::from(&amp;#34;.</description>
-    </item>
-    
-    <item>
-      <title>Hello</title>
-      <link>https://vincebye.github.io/post/hello/</link>
-      <pubDate>Tue, 11 Apr 2023 17:18:23 +0800</pubDate>
-      
-      <guid>https://vincebye.github.io/post/hello/</guid>
-      <description>ssssssssssssssssssssssssssss</description>
-    </item>
-    
-    <item>
-      <title>Test</title>
-      <link>https://vincebye.github.io/post/test/</link>
-      <pubDate>Tue, 11 Apr 2023 12:40:47 +0800</pubDate>
-      
-      <guid>https://vincebye.github.io/post/test/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Test</title>
-      <link>https://vincebye.github.io/test/</link>
-      <pubDate>Tue, 11 Apr 2023 12:40:24 +0800</pubDate>
-      
-      <guid>https://vincebye.github.io/test/</guid>
-      <description></description>
     </item>
     
   </channel>
