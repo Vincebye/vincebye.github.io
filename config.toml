@@ -1,4 +1,4 @@
-title = "Awesome Hugo blog"
+title = "The Space Between Us"
 baseURL = 'https://vincebye.github.io/'
 
 # This is what goes in <html lang="">
@@ -56,8 +56,8 @@ buildFuture = true
   avatar = "avatar.jpg" # put the file in assets folder; also ensure that image has same height and width
   # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
   intro = "Vincebye's blog"
-  name = "Z"
-  description = "None"
+  name = "Vincebye"
+  description = "INFJ/Pwnie/Developer/Writer"
 
 [[params.socialIcons]]
 name = "github"
