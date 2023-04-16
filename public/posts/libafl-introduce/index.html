@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">LibAFL Introduce | The Space Between Us</title>
+<meta property="og:title" content="LibAFL Introduce | The Space Between Us" />
+<meta name="twitter:title" content="LibAFL Introduce | The Space Between Us" />
+<meta itemprop="name" content="LibAFL Introduce | The Space Between Us" />
+<meta name="application-name" content="LibAFL Introduce | The Space Between Us" />
+<meta property="og:site_name" content="Vincebye&#39;s Blog" />
+
+<meta name="description" content="Minimal Hugo blog theme with light and dark mode support">
+<meta itemprop="description" content="Minimal Hugo blog theme with light and dark mode support" />
+<meta property="og:description" content="Minimal Hugo blog theme with light and dark mode support" />
+<meta name="twitter:description" content="Minimal Hugo blog theme with light and dark mode support" />
+
+<meta property="og:locale" content="en-us" />
+<meta name="language" content="en-us" />
+
+
+
+  <meta itemprop="image" content="https://vincebye.github.io/" />
+  <meta property="og:image" content="https://vincebye.github.io/" />
+  <meta name="twitter:image" content="https://vincebye.github.io/" />
+  <meta name="twitter:image:src" content="https://vincebye.github.io/" />
+
+
+
+
+    
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2023-04-12T00:38:17&#43;0800 />
+    <meta property="article:published_time" content=2023-04-12T00:38:17&#43;0800 />
+
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "LibAFL Introduce",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2023-04-12",
+        "description": "",
+        "wordCount":  366 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2023-04-12",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "The Space Between Us"
+        }
+    }
+    </script>
+
+  <meta name="generator" content="Hugo 0.111.3">
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GKH5P9VW55"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GKH5P9VW55');
+</script>
+  
+  
+
+  <link rel="canonical" href="https://vincebye.github.io/posts/libafl-introduce/"><link href="/sass/main.min.0eebb6db90b4ec9f4444ef402f08421ee056025ba860df3d749a9f299d472008.css" rel="stylesheet"><link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+  
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/images/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg">
+
+  
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GKH5P9VW55"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-GKH5P9VW55', { 'anonymize_ip': false });
+}
+</script>
+</head><body data-theme = "dark" class="notransition">
+<script src="https://vincebye.github.io/js/themeLoader.min.4e9e1a253d543bbfec02e7f2460d9621e719fd739dc8a5256faa91cda6e12e03.js"></script><div class="navbar" role="navigation">
+  <nav class="menu" aria-label="Main Navigation">
+    <a href="/" class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+    </a>
+    <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+    <label for="menu-trigger">
+      <span class="menu-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+      </span>
+    </label>
+
+    <div class="trigger">
+      <ul class="trigger-container">
+        
+        
+          <li>
+            <a 
+            class="menu-link "
+            href="/">
+            Home
+            </a>
+            
+          </li>
+        
+          <li>
+            <a 
+            class="menu-link active"
+            href="/posts/">
+            Posts
+            </a>
+            
+          </li>
+        
+          <li>
+            <a 
+            class="menu-link "
+            href="/about/">
+            About
+            </a>
+            
+          </li>
+        
+        <li class="menu-separator">
+          <span>|</span>
+        </li>
+      </ul>
+      <a id="mode" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+      </a>
+    </div>
+  </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">LibAFL Introduce</h1>
+                
+                <div class="post-meta">
+                    <time datetime="2023-04-12T00:38:17&#43;08:00" itemprop="datePublished"> 12 Apr 2023 </time>
+                </div>
+            </header>
+            <div class="page-content">
+                <p>#Fuzzer #Rust</p>
+<h2 id="序">序</h2>
+<h3 id="前置知识">前置知识</h3>
+<ul>
+<li>Rust</li>
+<li>Fuzzing</li>
+</ul>
+<h3 id="libafl介绍">LibAFL介绍</h3>
+<p>LibAFL：为了解决大量的fuzzer工具重复工作的问题，将fuzzer拆分成多个部分，编写fuzzer只需要将其组装，如输入可以改成字节输入或者AST输入，不需要重新安装熟悉多个fuzzer。缺点就是Rust门槛比较高。</p>
+<h3 id="资源">资源</h3>
+<p>LibAFL Book：https://aflplus.plus/libafl-book/libafl.html
+项目：https://github.com/AFLplusplus/LibAFL</p>
+<h2 id="正文">正文</h2>
+<h3 id="baby_fuzzer">baby_fuzzer</h3>
+<p>官方给出的一个简单案例用来说明如何使用LibAFL，我们摘取一部分,以下就是一个简单的fuzzer代码，<del>看着很复杂，不如直接AFL++一把梭。</del></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Rust" data-lang="Rust"><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Create an observation channel using the signals map
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">observer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">unsafe</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">StdMapObserver</span>::<span class="n">from_mut_ptr</span><span class="p">(</span><span class="s">&#34;signals&#34;</span><span class="p">,</span><span class="w"> </span><span class="no">SIGNALS_PTR</span><span class="p">,</span><span class="w"> </span><span class="no">SIGNALS</span><span class="p">.</span><span class="n">len</span><span class="p">())</span><span class="w"> </span><span class="p">};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Feedback to rate the interestingness of an input
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">feedback</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MaxMapFeedback</span>::<span class="n">new</span><span class="p">(</span><span class="o">&amp;</span><span class="n">observer</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// A feedback to choose if an input is a solution or not
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">objective</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CrashFeedback</span>::<span class="n">new</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// create a State from scratch
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StdState</span>::<span class="n">new</span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// RNG
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">        </span><span class="n">StdRand</span>::<span class="n">with_seed</span><span class="p">(</span><span class="n">current_nanos</span><span class="p">()),</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Corpus that will be evolved, we keep it in memory for performance
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">        </span><span class="n">InMemoryCorpus</span>::<span class="n">new</span><span class="p">(),</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Corpus in which we store solutions (crashes in this example),
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">        </span><span class="c1">// on disk so the user can get them after stopping the fuzzer
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">        </span><span class="n">OnDiskCorpus</span>::<span class="n">new</span><span class="p">(</span><span class="n">PathBuf</span>::<span class="n">from</span><span class="p">(</span><span class="s">&#34;./crashes&#34;</span><span class="p">)).</span><span class="n">unwrap</span><span class="p">(),</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// States of the feedbacks.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">        </span><span class="c1">// The feedbacks can report the data that should persist in the State.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">        </span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">feedback</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Same for objective feedbacks
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">        </span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">objective</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="n">unwrap</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// The Monitor trait define how the fuzzer stats are displayed to the user
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="cp">#[cfg(not(feature = </span><span class="s">&#34;tui&#34;</span><span class="cp">))]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">mon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SimpleMonitor</span>::<span class="n">new</span><span class="p">(</span><span class="o">|</span><span class="n">s</span><span class="o">|</span><span class="w"> </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;</span><span class="si">{s}</span><span class="s">&#34;</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="cp">#[cfg(feature = </span><span class="s">&#34;tui&#34;</span><span class="cp">)]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">mon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TuiMonitor</span>::<span class="n">new</span><span class="p">(</span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="s">&#34;Baby Fuzzer&#34;</span><span class="p">),</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// The event manager handle the various events generated during the fuzzing loop
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="c1">// such as the notification of the addition of a new item to the corpus
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">mgr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SimpleEventManager</span>::<span class="n">new</span><span class="p">(</span><span class="n">mon</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// A queue policy to get testcasess from the corpus
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">scheduler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QueueScheduler</span>::<span class="n">new</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// A fuzzer with feedbacks and a corpus scheduler
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">fuzzer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StdFuzzer</span>::<span class="n">new</span><span class="p">(</span><span class="n">scheduler</span><span class="p">,</span><span class="w"> </span><span class="n">feedback</span><span class="p">,</span><span class="w"> </span><span class="n">objective</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Create the executor for an in-process function with just one observer
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">executor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InProcessExecutor</span>::<span class="n">new</span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">harness</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="fm">tuple_list!</span><span class="p">(</span><span class="n">observer</span><span class="p">),</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">fuzzer</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">state</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">mgr</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="n">expect</span><span class="p">(</span><span class="s">&#34;Failed to create the Executor&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Generator of printable bytearrays of max size 32
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">generator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RandPrintablesGenerator</span>::<span class="n">new</span><span class="p">(</span><span class="mi">32</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Generate 8 initial inputs
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="n">state</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="n">generate_initial_inputs</span><span class="p">(</span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">fuzzer</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">executor</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">generator</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">mgr</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="n">expect</span><span class="p">(</span><span class="s">&#34;Failed to generate the initial corpus&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Setup a mutational stage with a basic bytes mutator
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">mutator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StdScheduledMutator</span>::<span class="n">new</span><span class="p">(</span><span class="n">havoc_mutations</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">stages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">tuple_list!</span><span class="p">(</span><span class="n">StdMutationalStage</span>::<span class="n">new</span><span class="p">(</span><span class="n">mutator</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">fuzzer</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="n">fuzz_loop</span><span class="p">(</span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">stages</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">executor</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">state</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">mgr</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">.</span><span class="n">expect</span><span class="p">(</span><span class="s">&#34;Error in the fuzzing loop&#34;</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></div><p>首先序中说过LibAFL是将fuzzer的多个步骤进行解耦，好让每个部分可以进行替换，实现一个fuzzer可以搞定所有fuzzer的效果。那我们如果编写fuzzer需要哪些部分呢？以下是我根据自己的认知需要的部分</p>
+<ul>
+<li>A-存储我们fuzzing过程中的状态</li>
+<li>B-提供fuzzing过程中的输入数据</li>
+<li>C-提供fuzzing输入的变异算法</li>
+<li>D-判定fuzzing结果是否有效（包含最少两种：有趣则加入原始语料库，产生如crash效果加入crash结果库）</li>
+<li>E-收集覆盖率</li>
+<li>F-任务调度，种子以怎样的方式或者算法加入队列</li>
+<li>G-执行器，如何去执行fuzzing</li>
+<li>H-界面输出，提供一个类似AFL界面来告知用户fuzzing的结果
+我自己大概能想到这几个组件，接下来看一下LibAFL的组件</li>
+</ul>
+<h3 id="组件">组件</h3>
+<ul>
+<li>Observer</li>
+<li>Executor
+<ul>
+<li>InProcessExecutor</li>
+<li>ForkserverExecutor</li>
+<li>TimeoutExecutor</li>
+<li>InProcessForkExecutor</li>
+</ul>
+</li>
+<li>Feedback</li>
+<li>Input</li>
+<li>Corpus</li>
+<li>Mutator</li>
+<li>Generator</li>
+<li>Stage</li>
+</ul>
+<p>以baby_fuzzer为例看看如何装配组件的
+<img src="../../images/Pasted%20image%2020230408200259.png" alt="picture">
+通过对着色部分的组装完成一个简单的fuzzer,乍看是有些繁杂，但是了解了每个部分功能以后，直接在原有代码进行更改就会比较简便。</p>
+
+            </div>
+        </article>
+    </main>
+<div class="disqus markdown">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "vincebye" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </div>
+</div>
+
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/Vincebye/" target="_blank" rel="noopener noreferrer me" title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/vincebye" target="_blank" rel="noopener noreferrer me" title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="index.xml" target="_blank" rel="noopener noreferrer me" title="Rss">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 11a9 9 0 0 1 9 9" />
+    <path d="M4 4a16 16 0 0 1 16 16" />
+    <circle cx="5" cy="19" r="1" />
+</svg>
+</a></div>
+    <small class="footer_copyright">
+        © 2023 Vincebye.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noreferrer noopener">Hugo blog awesome</a>
+        theme on
+        <a href="https://gohugo.io" target="_blank" rel="noreferrer noopener">Hugo</a>.
+    </small>
+</footer>
+<script src="https://vincebye.github.io/js/themeSwitchnMenu.min.2a402288242b6930b175a0722c267e2353055739b3975834df35e56d00dd8f50.js"></script></body>
+</html>

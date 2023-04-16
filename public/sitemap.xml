@@ -2,25 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://vincebye.github.io/about/</loc>
+    <lastmod>2023-04-16T18:02:42+08:00</lastmod>
+  </url><url>
+    <loc>https://vincebye.github.io/posts/</loc>
+    <lastmod>2023-04-16T18:02:42+08:00</lastmod>
+  </url><url>
+    <loc>https://vincebye.github.io/posts/rust%E8%B0%83%E7%94%A8c%E4%BB%A3%E7%A0%81/</loc>
+    <lastmod>2023-04-16T18:02:42+08:00</lastmod>
+  </url><url>
     <loc>https://vincebye.github.io/</loc>
+    <lastmod>2023-04-16T18:02:42+08:00</lastmod>
+  </url><url>
+    <loc>https://vincebye.github.io/posts/winafl%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2023-04-14T16:01:06+08:00</lastmod>
+  </url><url>
+    <loc>https://vincebye.github.io/posts/pin%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</loc>
     <lastmod>2023-04-13T16:34:00+08:00</lastmod>
   </url><url>
-    <loc>https://vincebye.github.io/dbi/</loc>
-    <lastmod>2023-04-13T16:34:00+08:00</lastmod>
-  </url><url>
-    <loc>https://vincebye.github.io/dbi/pin%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2023-04-13T16:34:00+08:00</lastmod>
-  </url><url>
-    <loc>https://vincebye.github.io/post/idapython%E8%87%AA%E5%8A%A8%E5%8C%96%E4%BB%A3%E7%A0%81/</loc>
+    <loc>https://vincebye.github.io/posts/idapython%E8%87%AA%E5%8A%A8%E5%8C%96%E4%BB%A3%E7%A0%81/</loc>
     <lastmod>2023-04-12T15:22:00+08:00</lastmod>
   </url><url>
-    <loc>https://vincebye.github.io/post/</loc>
-    <lastmod>2023-04-12T15:22:00+08:00</lastmod>
-  </url><url>
-    <loc>https://vincebye.github.io/fuzzer/</loc>
-    <lastmod>2023-04-12T00:38:17+08:00</lastmod>
-  </url><url>
-    <loc>https://vincebye.github.io/fuzzer/libafl-introduce/</loc>
+    <loc>https://vincebye.github.io/posts/libafl-introduce/</loc>
     <lastmod>2023-04-12T00:38:17+08:00</lastmod>
   </url><url>
     <loc>https://vincebye.github.io/categories/</loc>

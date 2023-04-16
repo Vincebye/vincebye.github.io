@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>The Space Between Us</title>
-    <link>https://vincebye.github.io/</link>
-    <description>Recent content on The Space Between Us</description>
+    <title>Posts on The Space Between Us</title>
+    <link>https://vincebye.github.io/posts/</link>
+    <description>Recent content in Posts on The Space Between Us</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Apr 2023 18:02:42 +0800</lastBuildDate><atom:link href="https://vincebye.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>about</title>
-      <link>https://vincebye.github.io/about/</link>
-      <pubDate>Sun, 16 Apr 2023 18:02:42 +0800</pubDate>
-      
-      <guid>https://vincebye.github.io/about/</guid>
-      <description>A Man.</description>
-    </item>
-    
+    <lastBuildDate>Sun, 16 Apr 2023 18:02:42 +0800</lastBuildDate><atom:link href="https://vincebye.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rust调用C代码</title>
       <link>https://vincebye.github.io/posts/rust%E8%B0%83%E7%94%A8c%E4%BB%A3%E7%A0%81/</link>
