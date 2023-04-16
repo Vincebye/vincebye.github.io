@@ -8,15 +8,6 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 16 Apr 2023 18:02:42 +0800</lastBuildDate><atom:link href="https://vincebye.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>about</title>
-      <link>https://vincebye.github.io/about/</link>
-      <pubDate>Sun, 16 Apr 2023 18:02:42 +0800</pubDate>
-      
-      <guid>https://vincebye.github.io/about/</guid>
-      <description>A Man.</description>
-    </item>
-    
-    <item>
       <title>Rust调用C代码</title>
       <link>https://vincebye.github.io/posts/rust%E8%B0%83%E7%94%A8c%E4%BB%A3%E7%A0%81/</link>
       <pubDate>Sun, 16 Apr 2023 18:02:42 +0800</pubDate>
@@ -85,6 +76,15 @@ c 表示对要分析的二进制文件生成一个新的IDB文件。 -A表示以
 资源 LibAFL Book：https://aflplus.plus/libafl-book/libafl.html 项目：https://github.com/AFLplusplus/LibAFL
 正文 baby_fuzzer 官方给出的一个简单案例用来说明如何使用LibAFL，我们摘取一部分,以下就是一个简单的fuzzer代码，看着很复杂，不如直接AFL++一把梭。
 // Create an observation channel using the signals map let observer = unsafe { StdMapObserver::from_mut_ptr(&amp;#34;signals&amp;#34;, SIGNALS_PTR, SIGNALS.len()) }; // Feedback to rate the interestingness of an input let mut feedback = MaxMapFeedback::new(&amp;amp;observer); // A feedback to choose if an input is a solution or not let mut objective = CrashFeedback::new(); // create a State from scratch let mut state = StdState::new( // RNG StdRand::with_seed(current_nanos()), // Corpus that will be evolved, we keep it in memory for performance InMemoryCorpus::new(), // Corpus in which we store solutions (crashes in this example), // on disk so the user can get them after stopping the fuzzer OnDiskCorpus::new(PathBuf::from(&amp;#34;.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://vincebye.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vincebye.github.io/about/</guid>
+      <description>A Man.</description>
     </item>
     
   </channel>
