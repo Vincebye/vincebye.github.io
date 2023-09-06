@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fuzzers on Awesome Hugo blog</title>
+    <link>https://vincebye.github.io/fuzzer/</link>
+    <description>Recent content in Fuzzers on Awesome Hugo blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 12 Apr 2023 00:38:17 +0800</lastBuildDate><atom:link href="https://vincebye.github.io/fuzzer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LibAFL Introduce</title>
+      <link>https://vincebye.github.io/fuzzer/libafl-introduce/</link>
+      <pubDate>Wed, 12 Apr 2023 00:38:17 +0800</pubDate>
+      
+      <guid>https://vincebye.github.io/fuzzer/libafl-introduce/</guid>
+      <description>#Fuzzer #Rust
+序 前置知识 Rust Fuzzing LibAFL介绍 LibAFL：为了解决大量的fuzzer工具重复工作的问题，将fuzzer拆分成多个部分，编写fuzzer只需要将其组装，如输入可以改成字节输入或者AST输入，不需要重新安装熟悉多个fuzzer。缺点就是Rust门槛比较高。
+资源 LibAFL Book：https://aflplus.plus/libafl-book/libafl.html 项目：https://github.com/AFLplusplus/LibAFL
+正文 baby_fuzzer 官方给出的一个简单案例用来说明如何使用LibAFL，我们摘取一部分,以下就是一个简单的fuzzer代码，看着很复杂，不如直接AFL++一把梭。
+// Create an observation channel using the signals map let observer = unsafe { StdMapObserver::from_mut_ptr(&amp;#34;signals&amp;#34;, SIGNALS_PTR, SIGNALS.len()) }; // Feedback to rate the interestingness of an input let mut feedback = MaxMapFeedback::new(&amp;amp;observer); // A feedback to choose if an input is a solution or not let mut objective = CrashFeedback::new(); // create a State from scratch let mut state = StdState::new( // RNG StdRand::with_seed(current_nanos()), // Corpus that will be evolved, we keep it in memory for performance InMemoryCorpus::new(), // Corpus in which we store solutions (crashes in this example), // on disk so the user can get them after stopping the fuzzer OnDiskCorpus::new(PathBuf::from(&amp;#34;.</description>
+    </item>
+    
+  </channel>
+</rss>

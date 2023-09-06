@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dbis on Awesome Hugo blog</title>
+    <link>https://vincebye.github.io/dbi/</link>
+    <description>Recent content in Dbis on Awesome Hugo blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 13 Apr 2023 16:34:00 +0800</lastBuildDate><atom:link href="https://vincebye.github.io/dbi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pin学习记录</title>
+      <link>https://vincebye.github.io/dbi/pin%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Thu, 13 Apr 2023 16:34:00 +0800</pubDate>
+      
+      <guid>https://vincebye.github.io/dbi/pin%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</guid>
+      <description>#插桩
+环境 windows Make&amp;amp;GCC&amp;amp;G++
+安装cygwin
+安装勾选gcc-core g++ make 在devel类别里
+然后将bin目录加入path
+编译测试项目
+64位
+使用x64 Native Tools Command Prompt for VS 2019
+cd C:\\pin\\source\\tools\\ManualExamples make all TARGET=intel64 32位
+使用x86 Native Tools Command Prompt for VS 2019，修改C:\pin\source\tools\Config\win.vars中添加一行 cd C:\\pin\\source\\tools\\ManualExamples make all VS集成Pin 在VS中选择工具→外部工具→Add
+运行 Examples Simple Instruction Count （指令插桩） 统计执行过的指令的总数
+/* * Copyright (C) 2004-2021 Intel Corporation. * SPDX-License-Identifier: MIT */ #include &amp;lt;iostream&amp;gt; #include &amp;lt;fstream&amp;gt; #include &amp;#34;pin.H&amp;#34; using std::cerr; using std::endl; using std::ios; using std::ofstream; using std::string; ofstream OutFile; // The running count of instructions is kept here // make it static to help the compiler optimize docount static UINT64 icount = 0; // This function is called before every instruction is executed //每个指令执行之前运行这个函数 VOID docount() { icount++; } // Pin calls this function every time a new instruction is encountered //每遇到一条指令，运行一次这个函数 VOID Instruction(INS ins, VOID* v) { // Insert a call to docount before every instruction, no arguments are passed //在每条指令运行之前插入一个函数来计数，没有参数传递 INS_InsertCall(ins, IPOINT_BEFORE, (AFUNPTR)docount, IARG_END); } KNOB&amp;lt; string &amp;gt; KnobOutputFile(KNOB_MODE_WRITEONCE, &amp;#34;pintool&amp;#34;, &amp;#34;o&amp;#34;, &amp;#34;inscount.</description>
+    </item>
+    
+  </channel>
+</rss>
