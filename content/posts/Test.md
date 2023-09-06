@@ -1,7 +1,7 @@
 ---
 share: "true"
-draft: "false"
-title: '"AAAAAA"'
+draft: false
+title: "AAAAAA"
 date: 2023-08-03
 ---
 Test plugin
