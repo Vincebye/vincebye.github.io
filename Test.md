@@ -1,0 +1,4 @@
+---
+share: "true"
+---
+Test plugin
